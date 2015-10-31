@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="test/fixtures/default/|**/bower_components/*|test/|**/node_modules/*|**/*.min.js" kind="src" path="node_modules/help"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|fixtures/default/|**/*.min.js" kind="src" path="node_modules/help/test"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="node_modules/help/test/fixtures/default"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/cordova/lib"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/cordova/node_modules/nopt/lib"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/cordova/node_modules/nopt/node_modules/abbrev"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/cordova/node_modules/q"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/cordova/node_modules/shelljs"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/CordovaLib"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/platform_www"/>
+	<classpathentry excluding="js/|**/node_modules/*|js/views/|lib/require/|lib/spin/|lib/utils/|lib/bootstrap/js/|**/bower_components/*|lib/leaflet/|js/views/pages/Subview/|lib/backbone/|js/collections/|lib/baasbox/JS-SDK-0.8.4/|lib/zepto/|lib/jquery/|js/models/|**/*.min.js|lib/underscore/|lib/ratchet/js/|lib/handlebars/|js/views/pages/|lib/preloader/" kind="src" path="platforms/ios/www"/>
+	<classpathentry excluding="views/pages/|views/|collections/|**/bower_components/*|**/node_modules/*|models/|views/pages/Subview/|**/*.min.js" kind="src" path="platforms/ios/www/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/js/collections"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/js/models"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|pages/Subview/|**/*.min.js|pages/" kind="src" path="platforms/ios/www/js/views"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|Subview/|**/*.min.js" kind="src" path="platforms/ios/www/js/views/pages"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/js/views/pages/Subview"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/baasbox/JS-SDK-0.8.4"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/backbone"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/bootstrap/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/handlebars"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/jquery"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/leaflet"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/preloader"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/ratchet/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/require"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/spin"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/underscore"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/utils"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="platforms/ios/www/lib/zepto"/>
+	<classpathentry excluding="views/pages/|views/|collections/|**/bower_components/*|**/node_modules/*|models/|views/pages/Subview/|**/*.min.js" kind="src" path="www/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/js/collections"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/js/models"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|pages/Subview/|**/*.min.js|pages/" kind="src" path="www/js/views"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|Subview/|**/*.min.js" kind="src" path="www/js/views/pages"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/js/views/pages/Subview"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/baasbox/JS-SDK-0.8.4"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/backbone"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/bootstrap/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/handlebars"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/jquery"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/leaflet"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/preloader"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/ratchet/js"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/require"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/spin"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/underscore"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/utils"/>
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="www/lib/zepto"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
