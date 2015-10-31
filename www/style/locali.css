@@ -1,0 +1,10 @@
+  .localijj{ 
+ 
+  			float: left;
+  			width: 110px;
+  			height: 110px;
+ 			text-align: center;
+  		    border: 1px solid black;
+  		    background: red;
+  		    border:1px line yellow; 
+  }

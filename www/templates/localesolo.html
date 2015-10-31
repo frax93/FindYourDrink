@@ -1,0 +1,19 @@
+<div class="box">
+<ul class="table-view">
+{{#each CollecLocalesolo}}
+  <li class="table-view-cell media" id="mappa">
+    <a class="navigate-right">
+      <img class="media-object pull-left localeunico" src="locali/{{this.immagine}}">
+      <div class="media-body">
+        {{this.nome}}
+      </div>
+    </a>
+  </li>
+  {{/each}}
+  <div>
+   descrizione del locale specifico 
+   selezionato nella view locali 
+   precedente
+  </div>
+</ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="box">
+<ul class="table-view">
+{{#each CollecDrinksolo}}
+  <li class="table-view-cell media" id="new">
+    <a class="navigate-right">
+      <img class="media-object pull-left drinkunico" src="drink/{{this.immagine}}">
+      <div class="media-body">
+        {{this.nome}}
+      </div>
+    </a>
+  </li>
+  {{/each}}
+  <div>
+   descrizione del drink specifico 
+   selezionato nella view drink 
+   precedente
+  </div>
+</ul>
+</div>
