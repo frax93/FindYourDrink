@@ -1,31 +1,42 @@
 define(function(require) {
-
   var Backbone = require("backbone");
-  var L = require("leaflet");
   var Utils = require("utils");
+  var drink_model=require("models/Drink");
+  var drink_collection=require("collections/Drink");
 
   var cerca = Utils.Page.extend({
 
     constructorName: "Cerca",
-
-
     id: "Cerca",
     className: "bar bar-nav",
     
     initialize: function(options) {
        this.template = Utils.templates.cerca;
-      // when I am in the DOM, I can start adding all the Leaflet stuff
-      this.listenTo(this, "inTheDOM", this.addCerca);
+      this.listenTo(this, "inTheDOM", this.onLoad);
     },
 
-    
+    events:{
+      "tap #ricerca": "Cerca"
+    },
+
     render: function() {
     $(this.el).html(this.template());
       return this;
     },
 
-    addCerca: function() {
-      
+    Cerca: function() {
+      var drink=$("#find").attr("value");
+      BaasBox.loadCollectionWithParams("drink",{where: "name="+"'"+drink+"'"}).done(function(response){
+        var drink=new drink_model(response);
+        var drink_found=new drink_collection(drink);
+        //Render del drink trovato
+        debugger;
+      }).fail(function(response){
+
+      });
+    },
+    onLoad: function(){
+
     }
   });
 
