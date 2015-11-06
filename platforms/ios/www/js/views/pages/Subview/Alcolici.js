@@ -45,19 +45,19 @@ define(function(require) {
     },
     
      selected: function(event){
-        var id = event.target.id;
-    		if(this.$('input[type="checkbox"]').hasClass('not-checked')){
-    		        this.$('input[type="checkbox"]').removeClass('not-checked');
-    		   		this.$("#"+id).addClass('active');
-    		   		var selezione=$("#"+id+".current").text();
-    		   	    localStorage.setItem(selezione,selezione);}
-    	    else {
-    	        this.$("#"+id).removeClass('active');
-    	        this.$('input[type="checkbox"]').addClass('not-checked');
-    	        var selezione=$("#"+id+".current").text();
-    	        localStorage.removeItem(selezione);
-    	        }
-      },
+    	 var id = event.target.id;
+         var selezione=$("#"+id+".current").attr("value");
+     		if(this.$('input[type="checkbox"]').hasClass('not-checked')){
+     		        this.$('input[type="checkbox"]').removeClass('not-checked');
+     		   		this.$("#"+id).addClass('active');
+     		   		localStorage.setItem(selezione,selezione);
+     		}
+     	    else {
+     	        this.$("#"+id).removeClass('active');
+     	        this.$('input[type="checkbox"]').addClass('not-checked');
+     	        localStorage.removeItem(selezione);
+     	    }
+       },
     
     /*NON SERVE loadData
     loadData: function() {

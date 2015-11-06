@@ -60,13 +60,14 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#hideme").show();
     	$("#showme").hide();
-    	//LocalStorage riprendo i dati e poi query a Baasbox.loadCollectionwithParams("drink",....).done(function(response){});
-    	debugger;
-    	BaasBox.loadCollection("drink").done(function(response){
-    		var drink_model=new Drink_model(response);
-    		var drink_collection=new Drink_collection(drink_model);
-    		debugger;
-    	});
+    	//loop di tutto il contenuto localStorage for(var key in localStorage)
+    	//Funziona con dati locali bisogna estendere
+    	    var ingrediente1=localStorage.getItem("'Gin'");
+    	    var ingrediente2=localStorage.getItem("'Arancia'");
+    	    BaasBox.loadCollectionWithParams("drink",{where: "ingrediente1="+ingrediente1+"AND ingrediente2="+ingrediente2}).done(function(res){
+    	    	debugger
+    	    	//render dei drink ritornati e incapsulamento nella collection 
+    	    	});
     },
 
     

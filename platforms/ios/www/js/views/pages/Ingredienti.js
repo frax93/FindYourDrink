@@ -78,8 +78,6 @@ define(function(require) {
              window.$('.img').remove();
              window.$('.segmented-control').after(frutta_view.render().$el);
              localStorage.getItem("Arancia");
-             debugger;
-             
          }).fail(function(error){
         	 
          });

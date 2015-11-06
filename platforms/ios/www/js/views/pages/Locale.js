@@ -18,7 +18,7 @@ define(function(require) {
     className: "bar",
    events: {
     	"tap #ciuccio1": "goback",
-    	"tap #mappa": "mappa"
+    	"onorentiationchange": "mappa"
     },
 
     initialize: function() {

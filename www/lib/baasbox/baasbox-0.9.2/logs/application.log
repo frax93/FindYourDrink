@@ -3633,3 +3633,1022 @@ $error$
 2015-10-31 12:48:40,450 - INFO  - Session Cleaner: started 
 2015-10-31 12:48:40,450 - INFO  - Session cleaner: tokens: 8 - removed: 0 
 2015-10-31 12:48:40,450 - INFO  - Session cleaner: finished 
+2015-11-02 13:16:41,808 - INFO  - BaasBox is starting... 
+2015-11-02 13:16:41,946 - INFO  - System details: 
+2015-11-02 13:16:42,146 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-02 13:16:42,147 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=104333312, used_memory_in_the_allocate_memory=14198968, free_memory_in_the_allocated_memory=90134344} 
+2015-11-02 13:16:42,148 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-02 13:16:42,150 - INFO  - ...Loading plugin... 
+2015-11-02 13:16:43,449 - DEBUG - application: main  Global.onStart() called 
+2015-11-02 13:16:43,481 - INFO  - Updating default users passwords... 
+2015-11-02 13:16:43,562 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-02 13:16:47,420 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,434 - DEBUG - application: main  Registering hooks... 
+2015-11-02 13:16:47,437 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-02 13:16:47,464 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-02 13:16:47,466 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@29be7749=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@30135202=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@53dfacba=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@aced190=REGULAR, com.baasbox.db.hook.Audit@989da1=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@1e63d216=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@2d195ee4=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@35f8a9d3=LAST, com.baasbox.db.hook.HidePassword@64030b91=LAST} 
+2015-11-02 13:16:47,468 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,469 - INFO  - ...looking for evolutions... 
+2015-11-02 13:16:47,498 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,525 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,527 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,529 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,530 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,531 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,533 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,547 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,554 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,555 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,556 - INFO  - ...db version is: 0.9.4 
+2015-11-02 13:16:47,628 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,630 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,631 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-02 13:16:47,633 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,634 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,635 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-02 13:16:47,636 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,637 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,691 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,692 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,751 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,753 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-02 13:16:47,753 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,754 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,755 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-02 13:16:47,756 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,757 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,762 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,763 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,772 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,773 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,774 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,776 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,777 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,778 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,779 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,780 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,783 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-02 13:16:47,784 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,786 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-02 13:16:47,788 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-02 13:16:47,797 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,798 - DEBUG - application: main  Registering hooks... 
+2015-11-02 13:16:47,799 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-02 13:16:47,800 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-02 13:16:47,801 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@511505e7=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@646811d6=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@15fdd1f2=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@cb0f763=REGULAR, com.baasbox.db.hook.Audit@109d724c=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@7573e12f=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@51b1a8f6=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@2a389173=LAST, com.baasbox.db.hook.HidePassword@1704f67f=LAST} 
+2015-11-02 13:16:47,803 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,828 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,830 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,831 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,832 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,833 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,834 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,835 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,836 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,840 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,841 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,842 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,843 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,844 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,845 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,846 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,847 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,848 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,849 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,852 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,853 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,854 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,855 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,856 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,857 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,858 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,859 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,860 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,861 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,863 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,864 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,865 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,866 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,867 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,868 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,869 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,870 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,871 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,872 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,876 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,878 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,879 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,880 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,881 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,882 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,883 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,884 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,885 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,886 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,888 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,889 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,893 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,895 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,896 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,897 - DEBUG - application: main  commandBuilder:  
+2015-11-02 13:16:47,898 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-02 13:16:47,899 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-02 13:16:47,900 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,901 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-02 13:16:47,905 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-02 13:16:47,906 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-02 13:16:47,907 - INFO  - ...done 
+2015-11-02 13:16:47,908 - INFO  - Override settings... 
+2015-11-02 13:16:47,909 - INFO  - ...No setting to override... 
+2015-11-02 13:16:47,910 - INFO  - ...done 
+2015-11-02 13:16:48,094 - INFO  -  
+2015-11-02 13:16:48,095 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-02 13:16:48,096 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-02 13:16:48,097 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-02 13:16:48,098 - DEBUG - application: main  Global.onStart() ended 
+2015-11-02 13:16:48,099 - INFO  - BaasBox is Ready. 
+2015-11-02 13:16:48,131 - INFO  - Application started (Prod) 
+2015-11-02 13:16:48,730 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-02 13:16:59,705 - INFO  - Starting application default Akka system. 
+2015-11-02 13:17:00,741 - INFO  - Session Cleaner: started 
+2015-11-02 13:17:00,742 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-02 13:17:00,743 - INFO  - Session cleaner: finished 
+2015-11-02 14:17:00,733 - INFO  - Session Cleaner: started 
+2015-11-02 14:17:00,735 - INFO  - Session cleaner: tokens: 20 - removed: 0 
+2015-11-02 14:17:00,735 - INFO  - Session cleaner: finished 
+2015-11-02 15:15:27,078 - INFO  - BaasBox is shutting down... 
+2015-11-02 15:15:27,078 - INFO  - Closing the DB connections... 
+2015-11-02 15:15:29,431 - INFO  - Shutting down embedded OrientDB Server 
+2015-11-02 15:15:29,431 - INFO  - ...ok 
+2015-11-02 15:15:29,431 - INFO  - Destroying session manager... 
+2015-11-02 15:15:29,431 - INFO  - Session Cleaner: cancelled 
+2015-11-02 15:15:29,431 - INFO  - ...BaasBox has stopped 
+2015-11-02 15:15:29,431 - INFO  - Shutdown application default Akka system. 
+2015-11-03 17:03:31,320 - INFO  - BaasBox is starting... 
+2015-11-03 17:03:31,430 - INFO  - System details: 
+2015-11-03 17:03:31,445 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-03 17:03:31,445 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=135790592, used_memory_in_the_allocate_memory=15616984, free_memory_in_the_allocated_memory=120173608} 
+2015-11-03 17:03:31,445 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-03 17:03:31,445 - INFO  - ...Loading plugin... 
+2015-11-03 17:03:31,711 - DEBUG - application: main  Global.onStart() called 
+2015-11-03 17:03:31,711 - INFO  - Updating default users passwords... 
+2015-11-03 17:03:31,711 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-03 17:03:35,899 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:35,914 - DEBUG - application: main  Registering hooks... 
+2015-11-03 17:03:35,930 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-03 17:03:35,930 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-03 17:03:35,930 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@29be7749=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@30135202=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@53dfacba=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@aced190=REGULAR, com.baasbox.db.hook.Audit@989da1=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@1e63d216=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@2d195ee4=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@35f8a9d3=LAST, com.baasbox.db.hook.HidePassword@64030b91=LAST} 
+2015-11-03 17:03:35,930 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:35,930 - INFO  - ...looking for evolutions... 
+2015-11-03 17:03:35,961 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:35,977 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:35,977 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:35,977 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:35,977 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:35,977 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:35,977 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,008 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,008 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,008 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,008 - INFO  - ...db version is: 0.9.4 
+2015-11-03 17:03:36,071 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,071 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,071 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-03 17:03:36,071 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,071 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,071 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-03 17:03:36,071 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,071 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,102 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,118 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,149 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,149 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-03 17:03:36,149 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,149 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,149 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-03 17:03:36,149 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,149 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,164 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,164 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,164 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,164 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,164 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-03 17:03:36,164 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Registering hooks... 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@511505e7=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@646811d6=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@15fdd1f2=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@cb0f763=REGULAR, com.baasbox.db.hook.Audit@109d724c=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@7573e12f=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@51b1a8f6=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@2a389173=LAST, com.baasbox.db.hook.HidePassword@1704f67f=LAST} 
+2015-11-03 17:03:36,164 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,227 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,227 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,227 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,227 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,227 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,227 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,227 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,243 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,243 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,243 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,243 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,243 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,243 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  commandBuilder:  
+2015-11-03 17:03:36,243 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-03 17:03:36,243 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-03 17:03:36,243 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-03 17:03:36,243 - INFO  - ...done 
+2015-11-03 17:03:36,258 - INFO  - Override settings... 
+2015-11-03 17:03:36,258 - INFO  - ...No setting to override... 
+2015-11-03 17:03:36,258 - INFO  - ...done 
+2015-11-03 17:03:36,321 - INFO  -  
+2015-11-03 17:03:36,321 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-03 17:03:36,321 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-03 17:03:36,321 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-03 17:03:36,321 - DEBUG - application: main  Global.onStart() ended 
+2015-11-03 17:03:36,321 - INFO  - BaasBox is Ready. 
+2015-11-03 17:03:36,399 - INFO  - Application started (Prod) 
+2015-11-03 17:03:36,868 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-03 17:04:52,997 - INFO  - Starting application default Akka system. 
+2015-11-03 17:04:54,033 - INFO  - Session Cleaner: started 
+2015-11-03 17:04:54,033 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-03 17:04:54,033 - INFO  - Session cleaner: finished 
+2015-11-03 17:26:44,088 - ERROR - application: play-akka.actor.default-dispatcher-73  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  (  {ingrediente1='Arancia' )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.IllegalStateException: Missing closed graph character: '}', position: 29
+	at com.orientechnologies.common.parser.OBaseParser.parserNextWord(OBaseParser.java:579)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:113)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-03 17:52:14,468 - INFO  - BaasBox is shutting down... 
+2015-11-03 17:52:14,468 - INFO  - Closing the DB connections... 
+2015-11-03 17:52:16,875 - INFO  - Shutting down embedded OrientDB Server 
+2015-11-03 17:52:16,875 - INFO  - ...ok 
+2015-11-03 17:52:16,875 - INFO  - Destroying session manager... 
+2015-11-03 17:52:16,890 - INFO  - Session Cleaner: cancelled 
+2015-11-03 17:52:16,890 - INFO  - ...BaasBox has stopped 
+2015-11-03 17:52:16,890 - INFO  - Shutdown application default Akka system. 
+2015-11-04 15:42:26,488 - INFO  - BaasBox is starting... 
+2015-11-04 15:42:26,598 - INFO  - System details: 
+2015-11-04 15:42:26,667 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-04 15:42:26,669 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=104857600, used_memory_in_the_allocate_memory=14198000, free_memory_in_the_allocated_memory=90659600} 
+2015-11-04 15:42:26,670 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-04 15:42:26,671 - INFO  - ...Loading plugin... 
+2015-11-04 15:42:27,645 - DEBUG - application: main  Global.onStart() called 
+2015-11-04 15:42:27,676 - INFO  - Updating default users passwords... 
+2015-11-04 15:42:27,690 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-04 15:42:31,407 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,409 - DEBUG - application: main  Registering hooks... 
+2015-11-04 15:42:31,411 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-04 15:42:31,414 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-04 15:42:31,416 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@29be7749=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@30135202=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@53dfacba=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@aced190=REGULAR, com.baasbox.db.hook.Audit@989da1=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@1e63d216=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@2d195ee4=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@35f8a9d3=LAST, com.baasbox.db.hook.HidePassword@64030b91=LAST} 
+2015-11-04 15:42:31,419 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,420 - INFO  - ...looking for evolutions... 
+2015-11-04 15:42:31,433 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,441 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,442 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,443 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,444 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,446 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,447 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,460 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,468 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,469 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,470 - INFO  - ...db version is: 0.9.4 
+2015-11-04 15:42:31,482 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,483 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,484 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-04 15:42:31,486 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,487 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,488 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-04 15:42:31,489 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,490 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,539 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,540 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,576 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,577 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-04 15:42:31,578 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,579 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,580 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-04 15:42:31,581 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,582 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,587 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,588 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,597 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,599 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,600 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,601 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,602 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,603 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,604 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,605 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,608 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-04 15:42:31,609 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,611 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-04 15:42:31,613 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-04 15:42:31,623 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,624 - DEBUG - application: main  Registering hooks... 
+2015-11-04 15:42:31,625 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-04 15:42:31,626 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-04 15:42:31,627 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@511505e7=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@646811d6=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@15fdd1f2=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@cb0f763=REGULAR, com.baasbox.db.hook.Audit@109d724c=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@7573e12f=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@51b1a8f6=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@2a389173=LAST, com.baasbox.db.hook.HidePassword@1704f67f=LAST} 
+2015-11-04 15:42:31,629 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,640 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,641 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,641 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,643 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,643 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,645 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,646 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,646 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,649 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,649 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,650 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,651 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,652 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,654 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,655 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,656 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,656 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,657 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,660 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,660 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,661 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,662 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,664 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,665 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,666 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,667 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,668 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,669 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,672 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,672 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,673 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,675 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,675 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,676 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,677 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,678 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,679 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,680 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,685 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,686 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,687 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,689 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,690 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,691 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,691 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,693 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,694 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,695 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,697 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,698 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,699 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,700 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,700 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,701 - DEBUG - application: main  commandBuilder:  
+2015-11-04 15:42:31,702 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-04 15:42:31,704 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-04 15:42:31,705 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,706 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-04 15:42:31,708 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-04 15:42:31,709 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-04 15:42:31,710 - INFO  - ...done 
+2015-11-04 15:42:31,710 - INFO  - Override settings... 
+2015-11-04 15:42:31,711 - INFO  - ...No setting to override... 
+2015-11-04 15:42:31,712 - INFO  - ...done 
+2015-11-04 15:42:31,741 - INFO  -  
+2015-11-04 15:42:31,741 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-04 15:42:31,742 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-04 15:42:31,744 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-04 15:42:31,746 - DEBUG - application: main  Global.onStart() ended 
+2015-11-04 15:42:31,749 - INFO  - BaasBox is Ready. 
+2015-11-04 15:42:31,781 - INFO  - Application started (Prod) 
+2015-11-04 15:42:32,140 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-04 15:43:24,516 - INFO  - Starting application default Akka system. 
+2015-11-04 15:43:25,535 - INFO  - Session Cleaner: started 
+2015-11-04 15:43:25,537 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-04 15:43:25,538 - INFO  - Session cleaner: finished 
+2015-11-04 16:00:31,515 - ERROR - application: play-akka.actor.default-dispatcher-35  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check the syntax of your 'where', 'orderBy' and recordsPerPage (cannot be 0) clauses. Hint: if you used < or > operators, put spaces before and after them
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:203)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.sql.OCommandSQLParsingException: Error on parsing command at position #41: Invalid keyword ''GIN''
+Command: select  from drink where ( ingrediente1: 'Gin' )
+-------------------------------------------------^
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract.throwParsingException(OCommandExecutorSQLAbstract.java:75)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:262)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+ 
+2015-11-04 16:17:08,372 - ERROR - application: play-akka.actor.default-dispatcher-68  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check the syntax of your 'where', 'orderBy' and recordsPerPage (cannot be 0) clauses. Hint: if you used < or > operators, put spaces before and after them
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:203)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.sql.OCommandSQLParsingException: Error on parsing command at position #42: Invalid keyword 'X'''
+Command: select  from drink where ( ingrediente2=''x'' )
+--------------------------------------------------^
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract.throwParsingException(OCommandExecutorSQLAbstract.java:75)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:262)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+ 
+2015-11-04 16:17:42,752 - ERROR - application: play-akka.actor.default-dispatcher-73  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check the syntax of your 'where', 'orderBy' and recordsPerPage (cannot be 0) clauses. Hint: if you used < or > operators, put spaces before and after them
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:203)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.sql.OCommandSQLParsingException: Error on parsing command at position #42: Invalid keyword 'X'''
+Command: select  from drink where ( ingrediente2=''x'' )
+--------------------------------------------------^
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract.throwParsingException(OCommandExecutorSQLAbstract.java:75)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:262)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+ 
+2015-11-04 16:43:25,536 - INFO  - Session Cleaner: started 
+2015-11-04 16:43:25,537 - INFO  - Session cleaner: tokens: 23 - removed: 0 
+2015-11-04 16:43:25,538 - INFO  - Session cleaner: finished 
+2015-11-04 17:35:11,696 - INFO  - BaasBox is shutting down... 
+2015-11-04 17:35:11,696 - INFO  - Closing the DB connections... 
+2015-11-04 17:35:14,383 - INFO  - Shutting down embedded OrientDB Server 
+2015-11-04 17:35:14,383 - INFO  - ...ok 
+2015-11-04 17:35:14,383 - INFO  - Destroying session manager... 
+2015-11-04 17:35:14,383 - INFO  - Session Cleaner: cancelled 
+2015-11-04 17:35:14,383 - INFO  - ...BaasBox has stopped 
+2015-11-04 17:35:14,383 - INFO  - Shutdown application default Akka system. 
+2015-11-05 15:55:14,923 - INFO  - BaasBox is starting... 
+2015-11-05 15:55:15,016 - INFO  - System details: 
+2015-11-05 15:55:15,032 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-05 15:55:15,032 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=137887744, used_memory_in_the_allocate_memory=14644568, free_memory_in_the_allocated_memory=123243176} 
+2015-11-05 15:55:15,032 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-05 15:55:15,032 - INFO  - ...Loading plugin... 
+2015-11-05 15:55:15,267 - DEBUG - application: main  Global.onStart() called 
+2015-11-05 15:55:15,282 - INFO  - Updating default users passwords... 
+2015-11-05 15:55:15,282 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Registering hooks... 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@29be7749=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@30135202=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@53dfacba=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@aced190=REGULAR, com.baasbox.db.hook.Audit@989da1=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@1e63d216=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@2d195ee4=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@35f8a9d3=LAST, com.baasbox.db.hook.HidePassword@64030b91=LAST} 
+2015-11-05 15:55:21,286 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,286 - INFO  - ...looking for evolutions... 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,302 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,302 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,302 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,302 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,302 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,302 - INFO  - ...db version is: 0.9.4 
+2015-11-05 15:55:21,317 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,317 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,317 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-05 15:55:21,317 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,317 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,317 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-05 15:55:21,317 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,317 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,333 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,333 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,368 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,369 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-05 15:55:21,369 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,369 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,370 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-05 15:55:21,370 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,371 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,373 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,373 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,377 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,378 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,378 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,378 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,379 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,379 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,379 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,380 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,381 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-05 15:55:21,381 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,382 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-05 15:55:21,383 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-05 15:55:21,388 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,388 - DEBUG - application: main  Registering hooks... 
+2015-11-05 15:55:21,388 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-05 15:55:21,389 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-05 15:55:21,390 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@511505e7=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@646811d6=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@15fdd1f2=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@cb0f763=REGULAR, com.baasbox.db.hook.Audit@109d724c=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@7573e12f=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@51b1a8f6=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@2a389173=LAST, com.baasbox.db.hook.HidePassword@1704f67f=LAST} 
+2015-11-05 15:55:21,391 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,394 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,395 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,395 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,395 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,396 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,396 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,396 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,397 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,398 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,398 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,398 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,398 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,399 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,399 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,399 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,400 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,400 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,400 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,401 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,401 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,401 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,402 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,402 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,402 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,403 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,403 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,403 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,404 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,404 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,405 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,405 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,406 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,406 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,407 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,407 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,408 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,408 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,408 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,410 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,410 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,410 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,411 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,411 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,412 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,412 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,412 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,412 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,413 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,413 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,413 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,414 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,414 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,414 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,415 - DEBUG - application: main  commandBuilder:  
+2015-11-05 15:55:21,415 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-05 15:55:21,415 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-05 15:55:21,415 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,416 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-05 15:55:21,416 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-05 15:55:21,417 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-05 15:55:21,417 - INFO  - ...done 
+2015-11-05 15:55:21,417 - INFO  - Override settings... 
+2015-11-05 15:55:21,418 - INFO  - ...No setting to override... 
+2015-11-05 15:55:21,418 - INFO  - ...done 
+2015-11-05 15:55:21,426 - INFO  -  
+2015-11-05 15:55:21,426 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-05 15:55:21,426 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-05 15:55:21,426 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-05 15:55:21,427 - DEBUG - application: main  Global.onStart() ended 
+2015-11-05 15:55:21,427 - INFO  - BaasBox is Ready. 
+2015-11-05 15:55:21,432 - INFO  - Application started (Prod) 
+2015-11-05 15:55:21,669 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-05 15:55:54,482 - INFO  - Starting application default Akka system. 
+2015-11-05 15:55:55,502 - INFO  - Session Cleaner: started 
+2015-11-05 15:55:55,503 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-05 15:55:55,503 - INFO  - Session cleaner: finished 
+2015-11-05 16:33:54,589 - INFO  - BaasBox is shutting down... 
+2015-11-05 16:33:54,589 - INFO  - Closing the DB connections... 
+2015-11-05 16:33:57,402 - INFO  - Shutting down embedded OrientDB Server 
+2015-11-05 16:33:57,402 - INFO  - ...ok 
+2015-11-05 16:33:57,402 - INFO  - Destroying session manager... 
+2015-11-05 16:33:57,402 - INFO  - Session Cleaner: cancelled 
+2015-11-05 16:33:57,402 - INFO  - ...BaasBox has stopped 
+2015-11-05 16:33:57,402 - INFO  - Shutdown application default Akka system. 
+2015-11-06 18:48:20,028 - INFO  - BaasBox is starting... 
+2015-11-06 18:48:20,106 - INFO  - System details: 
+2015-11-06 18:48:20,174 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-06 18:48:20,176 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=104333312, used_memory_in_the_allocate_memory=14069680, free_memory_in_the_allocated_memory=90263632} 
+2015-11-06 18:48:20,177 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-06 18:48:20,178 - INFO  - ...Loading plugin... 
+2015-11-06 18:48:21,189 - DEBUG - application: main  Global.onStart() called 
+2015-11-06 18:48:21,227 - INFO  - Updating default users passwords... 
+2015-11-06 18:48:21,245 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-06 18:48:25,599 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,601 - DEBUG - application: main  Registering hooks... 
+2015-11-06 18:48:25,604 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-06 18:48:25,606 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-06 18:48:25,607 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@29be7749=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@30135202=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@53dfacba=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@aced190=REGULAR, com.baasbox.db.hook.Audit@989da1=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@1e63d216=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@2d195ee4=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@35f8a9d3=LAST, com.baasbox.db.hook.HidePassword@64030b91=LAST} 
+2015-11-06 18:48:25,608 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,609 - INFO  - ...looking for evolutions... 
+2015-11-06 18:48:25,621 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,627 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,628 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,629 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,630 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,631 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,631 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,643 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,650 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,650 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,651 - INFO  - ...db version is: 0.9.4 
+2015-11-06 18:48:25,661 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,662 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,663 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-06 18:48:25,664 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,664 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,665 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-06 18:48:25,666 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,666 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,715 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,716 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,782 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,782 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-06 18:48:25,783 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,783 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,784 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-06 18:48:25,784 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,785 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,788 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,789 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,798 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,799 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,800 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,800 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,801 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,801 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,802 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,802 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,805 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 552416003 
+2015-11-06 18:48:25,805 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,806 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-06 18:48:25,808 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-06 18:48:25,817 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,818 - DEBUG - application: main  Registering hooks... 
+2015-11-06 18:48:25,818 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-06 18:48:25,819 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-06 18:48:25,820 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@511505e7=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@646811d6=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@15fdd1f2=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@cb0f763=REGULAR, com.baasbox.db.hook.Audit@109d724c=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@7573e12f=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@51b1a8f6=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@2a389173=LAST, com.baasbox.db.hook.HidePassword@1704f67f=LAST} 
+2015-11-06 18:48:25,820 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,830 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,831 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,832 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,833 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,833 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,834 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,834 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,834 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,836 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,837 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,837 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,838 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,839 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,839 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,840 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,840 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,841 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,841 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,843 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,843 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,844 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,845 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,845 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,846 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,846 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,847 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,847 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,848 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,849 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,850 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,851 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,851 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,852 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,852 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,853 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,853 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,854 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,854 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,857 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,858 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,858 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,859 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,860 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,860 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,861 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,861 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,862 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,862 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,864 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,864 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,865 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,865 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,866 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,866 - DEBUG - application: main  commandBuilder:  
+2015-11-06 18:48:25,867 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 18:48:25,867 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 18:48:25,867 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,868 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 18:48:25,869 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 337545117 
+2015-11-06 18:48:25,870 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 18:48:25,871 - INFO  - ...done 
+2015-11-06 18:48:25,871 - INFO  - Override settings... 
+2015-11-06 18:48:25,872 - INFO  - ...No setting to override... 
+2015-11-06 18:48:25,872 - INFO  - ...done 
+2015-11-06 18:48:25,903 - INFO  -  
+2015-11-06 18:48:25,904 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-06 18:48:25,904 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-06 18:48:25,905 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-06 18:48:25,905 - DEBUG - application: main  Global.onStart() ended 
+2015-11-06 18:48:25,906 - INFO  - BaasBox is Ready. 
+2015-11-06 18:48:25,921 - INFO  - Application started (Prod) 
+2015-11-06 18:48:26,282 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-06 18:48:51,884 - INFO  - Starting application default Akka system. 
+2015-11-06 18:48:52,911 - INFO  - Session Cleaner: started 
+2015-11-06 18:48:52,911 - INFO  - Session Cleaner: started 
+2015-11-06 18:48:52,912 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-06 18:48:52,912 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-06 18:48:52,913 - INFO  - Session cleaner: finished 
+2015-11-06 18:48:52,913 - INFO  - Session cleaner: finished 
+2015-11-06 19:11:32,310 - ERROR - application: play-akka.actor.default-dispatcher-23  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( ingrediente1='Gin' AND ingrediente2=' 'Arancia ' )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.IllegalStateException: Missing closed string character: ''', position: 53
+	at com.orientechnologies.common.parser.OBaseParser.parserNextWord(OBaseParser.java:575)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:113)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-06 19:48:52,899 - INFO  - Session Cleaner: started 
+2015-11-06 19:48:52,899 - INFO  - Session Cleaner: started 
+2015-11-06 19:48:52,899 - INFO  - Session cleaner: tokens: 15 - removed: 0 
+2015-11-06 19:48:52,899 - INFO  - Session cleaner: tokens: 15 - removed: 0 
+2015-11-06 19:48:52,899 - INFO  - Session cleaner: finished 
+2015-11-06 19:48:52,899 - INFO  - Session cleaner: finished 
+2015-11-06 19:49:08,094 - ERROR - application: play-akka.actor.default-dispatcher-70  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check the syntax of your 'where', 'orderBy' and recordsPerPage (cannot be 0) clauses. Hint: if you used < or > operators, put spaces before and after them
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:203)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.sql.OCommandSQLParsingException: Error on parsing command at position #53: Invalid keyword 'INGREDIENTE2'
+Command: select  from drink where ( ingrediente1=undefinedAND ingrediente2=undefined )
+-------------------------------------------------------------^
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLAbstract.throwParsingException(OCommandExecutorSQLAbstract.java:75)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:262)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+ 
