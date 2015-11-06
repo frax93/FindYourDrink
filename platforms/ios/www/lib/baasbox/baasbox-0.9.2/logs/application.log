@@ -4652,3 +4652,434 @@ Command: select  from drink where ( ingrediente1=undefinedAND ingrediente2=undef
 	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
 	... 25 more
  
+2015-11-06 20:05:48,403 - INFO  - BaasBox is shutting down... 
+2015-11-06 20:05:48,403 - INFO  - Closing the DB connections... 
+2015-11-06 20:05:50,825 - INFO  - Shutting down embedded OrientDB Server 
+2015-11-06 20:05:50,825 - INFO  - ...ok 
+2015-11-06 20:05:50,825 - INFO  - Destroying session manager... 
+2015-11-06 20:05:50,825 - INFO  - Session Cleaner: cancelled 
+2015-11-06 20:05:50,825 - INFO  - ...BaasBox has stopped 
+2015-11-06 20:05:50,825 - INFO  - Shutdown application default Akka system. 
+2015-11-06 20:05:50,856 - INFO  - Session Cleaner: started 
+2015-11-06 20:05:50,856 - INFO  - Session cleaner: tokens: 18 - removed: 0 
+2015-11-06 20:05:50,856 - INFO  - Session cleaner: finished 
+2015-11-06 22:32:14,987 - INFO  - BaasBox is starting... 
+2015-11-06 22:32:15,034 - INFO  - System details: 
+2015-11-06 22:32:15,097 - INFO  - {os_name=Windows 8.1, os_arch=amd64, os_version=6.3, processors=8} 
+2015-11-06 22:32:15,112 - INFO  - {max_allocable_memory=1883242496, current_allocate_memory=104333312, used_memory_in_the_allocate_memory=13816392, free_memory_in_the_allocated_memory=90516920} 
+2015-11-06 22:32:15,112 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_65} 
+2015-11-06 22:32:15,112 - INFO  - ...Loading plugin... 
+2015-11-06 22:32:16,159 - DEBUG - application: main  Global.onStart() called 
+2015-11-06 22:32:16,159 - INFO  - Updating default users passwords... 
+2015-11-06 22:32:16,175 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-06 22:32:19,613 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,629 - DEBUG - application: main  Registering hooks... 
+2015-11-06 22:32:19,629 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-06 22:32:19,629 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-06 22:32:19,629 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@60723d6a=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@71178a52=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@44afefd5=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@2687f956=REGULAR, com.baasbox.db.hook.Audit@1542af63=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@5f84abe8=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@6a4d7f76=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@aced190=LAST, com.baasbox.db.hook.HidePassword@3adbe50f=LAST} 
+2015-11-06 22:32:19,629 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,629 - INFO  - ...looking for evolutions... 
+2015-11-06 22:32:19,644 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,644 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,644 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,660 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,660 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:db.version], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,660 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,660 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,675 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,675 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,675 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,675 - INFO  - ...db version is: 0.9.4 
+2015-11-06 22:32:19,691 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,691 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,691 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-06 22:32:19,691 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,691 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[baasbox], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,691 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-06 22:32:19,691 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,691 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,738 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,754 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,832 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,847 - DEBUG - application: main  queryBuilder: select  from _BB_User where ( user.name=? ) 
+2015-11-06 22:32:19,847 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,847 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=user.name=?, params=[internal_admin], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,847 - DEBUG - application: main    sql.select  from _BB_User where ( user.name=? ) 
+2015-11-06 22:32:19,847 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,847 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,847 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,847 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,863 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,863 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,863 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_INTERNAL:installation.id], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,863 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1277678493 
+2015-11-06 22:32:19,863 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,879 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-11-06 22:32:19,879 - DEBUG - application: main  opening connection on db: db/baasbox for internal_admin 
+2015-11-06 22:32:19,879 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,879 - DEBUG - application: main  Registering hooks... 
+2015-11-06 22:32:19,879 - DEBUG - application: main  Registering BaasBox hooks... start 
+2015-11-06 22:32:19,894 - DEBUG - application: main  Registering BaasBox hooks... done 
+2015-11-06 22:32:19,894 - DEBUG - application: main  Hooks: {com.orientechnologies.orient.core.db.record.OClassTrigger@769d513=FIRST, com.orientechnologies.orient.core.metadata.security.ORestrictedAccessHook@5e4fa1da=FIRST, com.orientechnologies.orient.core.metadata.security.OUserTrigger@588cd519=EARLY, com.orientechnologies.orient.core.metadata.function.OFunctionTrigger@3f92c349=REGULAR, com.baasbox.db.hook.Audit@15fdd1f2=REGULAR, com.orientechnologies.orient.core.index.OClassIndexManager@769a58e5=LAST, com.orientechnologies.orient.core.schedule.OSchedulerTrigger@55f8669d=LAST, com.orientechnologies.orient.core.db.record.ridbag.sbtree.ORidBagDeleteHook@6be25526=LAST, com.baasbox.db.hook.HidePassword@cb0f763=LAST} 
+2015-11-06 22:32:19,894 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,894 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,894 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,894 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,910 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,910 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,910 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,910 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,910 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,910 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile1.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,910 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,910 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,925 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,925 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,925 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,925 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,925 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,941 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,941 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile2.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,941 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,941 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,957 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,957 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.production.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,957 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,957 - DEBUG - application: main  queryBuilder: select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,957 - DEBUG - application: main  commandBuilder:  
+2015-11-06 22:32:19,957 - DEBUG - application: main    QueryParams [justCount=false, fields=, where=key = ?, params=[_BB_PUSH:profile3.sandbox.ios.certificate], page=-1, recordPerPage=20, groupBy=, orderBy=, depth=0 ] 
+2015-11-06 22:32:19,957 - DEBUG - application: main    sql.select  from _BB_Index where ( key = ? ) 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,957 - DEBUG - application: main  Enable: true HidePassword hook 
+2015-11-06 22:32:19,972 - DEBUG - application: main  Connection id: OrientDB[plocal:db/baasbox] (users: 1) 1684541910 
+2015-11-06 22:32:19,972 - DEBUG - application: main  Enable: false HidePassword hook 
+2015-11-06 22:32:19,972 - INFO  - ...done 
+2015-11-06 22:32:19,972 - INFO  - Override settings... 
+2015-11-06 22:32:19,972 - INFO  - ...No setting to override... 
+2015-11-06 22:32:19,972 - INFO  - ...done 
+2015-11-06 22:32:20,004 - INFO  -  
+2015-11-06 22:32:20,004 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-11-06 22:32:20,004 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-11-06 22:32:20,004 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-11-06 22:32:20,004 - DEBUG - application: main  Global.onStart() ended 
+2015-11-06 22:32:20,004 - INFO  - BaasBox is Ready. 
+2015-11-06 22:32:20,019 - INFO  - Application started (Prod) 
+2015-11-06 22:32:20,412 - INFO  - Listening for HTTP on /0:0:0:0:0:0:0:0:9000 
+2015-11-06 22:33:44,229 - INFO  - Starting application default Akka system. 
+2015-11-06 22:33:45,272 - INFO  - Session Cleaner: started 
+2015-11-06 22:33:45,272 - INFO  - Session cleaner: tokens: 1 - removed: 0 
+2015-11-06 22:33:45,272 - INFO  - Session cleaner: finished 
+2015-11-06 23:14:05,358 - ERROR - application: play-akka.actor.default-dispatcher-43  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( name= )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at com.orientechnologies.orient.core.sql.OSQLHelper.parseValue(OSQLHelper.java:174)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:328)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:182)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:267)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:163)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-06 23:14:32,344 - ERROR - application: play-akka.actor.default-dispatcher-43  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( name= )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at com.orientechnologies.orient.core.sql.OSQLHelper.parseValue(OSQLHelper.java:174)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:328)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:182)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:267)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:163)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-06 23:15:20,465 - ERROR - application: play-akka.actor.default-dispatcher-43  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( name= )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at com.orientechnologies.orient.core.sql.OSQLHelper.parseValue(OSQLHelper.java:174)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:328)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:182)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:267)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:163)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-06 23:17:38,994 - ERROR - application: play-akka.actor.default-dispatcher-46  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( name= )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at com.orientechnologies.orient.core.sql.OSQLHelper.parseValue(OSQLHelper.java:174)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:328)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:182)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:267)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:163)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 
+2015-11-06 23:18:56,336 - ERROR - application: play-akka.actor.default-dispatcher-52  com.baasbox.dao.exception.InvalidCriteriaException: Invalid criteria. Please check if your querystring is encoded in a corrected way. Double check the single-quote and the quote characters
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:201)
+	at com.baasbox.service.storage.DocumentService.getDocuments(DocumentService.java:193)
+	at com.baasbox.controllers.Document.getDocuments(Document.java:161)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$60$$anonfun$apply$60.apply(routes_routing.scala:1178)
+	at play.core.Router$HandlerInvoker$$anon$7$$anon$2.invocation(Router.scala:183)
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:377)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:56)
+	at play.GlobalSettings$1.call(GlobalSettings.java:64)
+	at com.baasbox.controllers.actions.filters.ExtractQueryParameters.call(ExtractQueryParameters.java:44)
+	at com.baasbox.controllers.actions.filters.ConnectToDBFilter.call(ConnectToDBFilter.java:81)
+	at com.baasbox.controllers.actions.filters.UserOrAnonymousCredentialsFilter.call(UserOrAnonymousCredentialsFilter.java:107)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:91)
+	at play.core.j.JavaAction$$anon$3.apply(JavaAction.scala:90)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at play.core.j.FPromiseHelper$$anonfun$flatMap$1.apply(FPromiseHelper.scala:82)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:37)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:42)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:386)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: com.orientechnologies.orient.core.exception.OQueryParsingException: Error on parsing query
+Query:  ( name= )
+------^
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:91)
+	at com.orientechnologies.orient.core.sql.filter.OSQLFilter.<init>(OSQLFilter.java:42)
+	at com.orientechnologies.orient.core.sql.OSQLEngine.parseCondition(OSQLEngine.java:440)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:231)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLSelect.parse(OCommandExecutorSQLSelect.java:112)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:52)
+	at com.orientechnologies.orient.core.sql.OCommandExecutorSQLDelegate.parse(OCommandExecutorSQLDelegate.java:33)
+	at com.orientechnologies.orient.core.storage.OStorageEmbedded.command(OStorageEmbedded.java:101)
+	at com.orientechnologies.orient.core.sql.query.OSQLQuery.run(OSQLQuery.java:69)
+	at com.orientechnologies.orient.core.sql.query.OSQLSynchQuery.run(OSQLSynchQuery.java:80)
+	at com.orientechnologies.orient.core.query.OQueryAbstract.execute(OQueryAbstract.java:29)
+	at com.baasbox.db.DbHelper.selectCommandExecute(DbHelper.java:243)
+	at com.baasbox.dao.NodeDao.get(NodeDao.java:196)
+	... 25 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.lang.String.charAt(Unknown Source)
+	at com.orientechnologies.orient.core.sql.OSQLHelper.parseValue(OSQLHelper.java:174)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:328)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:182)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditionItem(OSQLPredicate.java:267)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractCondition(OSQLPredicate.java:163)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.extractConditions(OSQLPredicate.java:127)
+	at com.orientechnologies.orient.core.sql.filter.OSQLPredicate.text(OSQLPredicate.java:81)
+	... 37 more
+ 

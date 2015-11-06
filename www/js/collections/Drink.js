@@ -1,7 +1,7 @@
 define(function(require) {
 
 	var Backbone = require("backbone");
-    var drinkm = require("models/Drinks");
+    var drinkm = require("models/Drink");
     
 	var drinkc = Backbone.Collection.extend({
 		constructorName:"Drink",

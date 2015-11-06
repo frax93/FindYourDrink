@@ -10,6 +10,7 @@ require.config({
     templates: '../templates',
     leaflet: '../lib/leaflet/leaflet',
     spin: '../lib/spin/spin.min',
+    spinner: 'spinner',
     preloader: '../lib/preloader/pre-loader',
     utils: '../lib/utils/utils',
 	baasbox: '../lib/baasbox/JS-SDK-0.8.4/baasbox'

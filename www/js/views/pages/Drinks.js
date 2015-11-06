@@ -1,7 +1,7 @@
 define(function(require) {
   var Backbone = require("backbone");
-  var Drink_collection = require("collections/Drinks");
-  var Drink_model = require("models/Drinks");
+  var Drink_collection = require("collections/Drink");
+  var Drink_model = require("models/Drink");
   var Utils = require("utils");
   
   var model10 = new Drink_model({

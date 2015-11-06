@@ -6,6 +6,7 @@ define(function(require) {
   var Utils = require("utils");
   var MyCollection = require("collections/Ingredienti");
   var Ingrediente = require("models/Ingrediente");
+  var spinner=require("spinner");
 
   var Ingredienti = Utils.Page.extend({
 
@@ -65,6 +66,7 @@ define(function(require) {
     },
     //FARE IL .fail in frutta,alcolici e altro
     frutta: function(event){
+       spinner.spin(document.body);
     	 BaasBox.loadCollection("frutta").done(function(response){
              var collect= new MyCollection();
              for(var key_res in response){
@@ -76,6 +78,7 @@ define(function(require) {
               }
              var frutta_view=new Frutta(collect);
              window.$('.img').remove();
+             spinner.stop();
              window.$('.segmented-control').after(frutta_view.render().$el);
              localStorage.getItem("Arancia");
          }).fail(function(error){
@@ -84,6 +87,7 @@ define(function(require) {
      
     },
     alcolici: function(event){
+      spinner.spin(document.body);
       BaasBox.loadCollection("alcolici").done(function(response){
           var collect= new MyCollection();
           for(var key_res in response){
@@ -95,6 +99,7 @@ define(function(require) {
            }
           var alcolici_view=new Alcolici(collect);
           window.$('.img').remove();
+          spinner.stop();
           window.$('.segmented-control').after(alcolici_view.render().$el);
           
       }).fail(function(error){
@@ -102,6 +107,7 @@ define(function(require) {
       });
     },
     altro: function(event){
+      spinner.spin(document.body);
     	 BaasBox.loadCollection("altro").done(function(response){
              var altro_collection= new MyCollection();
              for(var key_res in response){
@@ -113,6 +119,7 @@ define(function(require) {
               }
              var altro_view=new Altro(altro_collection);
              window.$('.img').remove();
+             spinner.stop();
              window.$('.segmented-control').after(altro_view.render().$el);
              
          }).fail(function(error){

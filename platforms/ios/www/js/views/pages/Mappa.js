@@ -40,7 +40,6 @@ var map;
 var x = document.getElementById("errori");
 
 navigator.geolocation.getCurrentPosition(function(position){ 
-	debugger;
   var chicago = {lat: position.coords.latitude, lng: position.coords.longitude };
   var indianapolis = {lat: 41.294938, lng: 13.3537368};
 

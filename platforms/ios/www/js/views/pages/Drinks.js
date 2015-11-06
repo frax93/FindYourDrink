@@ -1,7 +1,7 @@
 define(function(require) {
   var Backbone = require("backbone");
-  var Drink_collection = require("collections/Drinks");
-  var Drink_model = require("models/Drinks");
+  var Drink_collection = require("collections/Drink");
+  var Drink_model = require("models/Drink");
   var Utils = require("utils");
   
   var model10 = new Drink_model({
@@ -61,12 +61,13 @@ define(function(require) {
     	$("#hideme").show();
     	$("#showme").hide();
     	//loop di tutto il contenuto localStorage for(var key in localStorage)
+    	//Funziona con dati locali bisogna estendere
     	    var ingrediente1=localStorage.getItem("'Gin'");
     	    var ingrediente2=localStorage.getItem("'Arancia'");
-    	    debugger;
     	    BaasBox.loadCollectionWithParams("drink",{where: "ingrediente1="+ingrediente1+"AND ingrediente2="+ingrediente2}).done(function(res){
-    	    	debugger});
-    	//}
+    	    	debugger
+    	    	//render dei drink ritornati e incapsulamento nella collection 
+    	    	});
     },
 
     
