@@ -5,7 +5,7 @@ define(function(require) {
 		constructorName: "Drink",
 		 defaults: {
           nome: null,
-          immagine: null
+          id: null
         },
 	});
 

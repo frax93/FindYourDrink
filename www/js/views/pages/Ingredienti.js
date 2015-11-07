@@ -138,8 +138,8 @@ define(function(require) {
 
 
 
-    goToMap: function(e) {
-      Backbone.history.navigate("map", {
+    goToDrink: function(event) {
+      Backbone.history.navigate("drink", {
         trigger: true
       });
     }

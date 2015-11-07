@@ -4,17 +4,12 @@ define(function(require) {
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
   
-  var model10 = new Drink_model({
-        nome: "Abbey",
-		immagine: "abbey.jpg"
-    });
-    
-    var collec=new Drink_collection([model10]);
+
 
   var specificDView = Utils.Page.extend({
 
     constructorName: "specificD",
-	collection: collec,
+	
 	id: "Drink",
     className: "bar",
    events: {
@@ -22,16 +17,18 @@ define(function(require) {
     	"tap #ciuccio1": "goback"
     },
 
-    initialize: function() {
+    initialize: function(Collection) {
 		
       // load the precompiled template
       this.template = Utils.templates.drinksolo;
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.loadData);
+      this.collection=Collection;
     },
 
     render: function() {
-       $(this.el).html(this.template({CollecDrinksolo: this.collection.toJSON()}));
+    	debugger;
+       $(this.el).html(this.template({Drinksolo: this.collection.toJSON()}));
       return this;
     },   
     goback: function() {
