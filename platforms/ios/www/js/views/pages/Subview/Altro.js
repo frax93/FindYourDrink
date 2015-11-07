@@ -55,10 +55,12 @@ define(function(require) {
     		if(this.$('input[type="checkbox"]').hasClass('not-checked')){
     		        this.$('input[type="checkbox"]').removeClass('not-checked');
     		   		this.$("#"+id).addClass('active');
+    		   		this.$("#"+id).css("color","white");
     		   		localStorage.setItem(selezione,selezione);
     		}
     	    else {
     	        this.$("#"+id).removeClass('active');
+    	        this.$("#"+id).css("color","#007aff");
     	        this.$('input[type="checkbox"]').addClass('not-checked');
     	        localStorage.removeItem(selezione);
     	    }
