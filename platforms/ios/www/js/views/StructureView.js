@@ -89,11 +89,7 @@ define(function(require) {
         trigger: true
       });
     },
-    mappa: function(event){
-   	 Backbone.history.navigate("Mappa", {
-       trigger: true
-     });
-    },
+
     ingredienti: function(event) {
       Backbone.history.navigate("Ingredienti", {
         trigger: true

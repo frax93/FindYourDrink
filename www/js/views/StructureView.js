@@ -19,7 +19,6 @@ define(function(require) {
       "tap #spec": "specifico",
       "tap #new": "locali",
       "tap #spec2": "specificol",
-      "tap #mappa": "mappa"
     },
 
     initialize: function(options) {
@@ -89,11 +88,7 @@ define(function(require) {
         trigger: true
       });
     },
-    mappa: function(event){
-   	 Backbone.history.navigate("Mappa", {
-       trigger: true
-     });
-    },
+
     ingredienti: function(event) {
       Backbone.history.navigate("Ingredienti", {
         trigger: true

@@ -59,8 +59,9 @@ define(function(require) {
       window.history.back("drinkView");
     },
     
-    loadData: function() {
+    onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	$("#showme").show();
     },
 
     

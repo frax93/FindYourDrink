@@ -132,8 +132,6 @@ define(function(require) {
       //spinner.spin(document.body);
     	$("#hideme").hide();
     	$("#showme").show();
-
-		
     },
 
 

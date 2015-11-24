@@ -1,5 +1,6 @@
 define(function(require) {
   var Backbone = require("backbone");
+  var Drink_solo=require("views/pages/Drink")
   var Drink_collection = require("collections/Drink");
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
@@ -37,6 +38,7 @@ define(function(require) {
     className: "bar",
    events: {
     	"tap #ciuccio1": "goback",
+    	"tap .tap": "drinksolo"
     },
 
     initialize: function() {
@@ -55,19 +57,43 @@ define(function(require) {
     goback: function() {
       window.history.back("myview");
     },
-    
+    drinksolo: function(){
+    	//Aggiungere presa del nome del drink da html dinamicamente
+    	var drink="Abbey";
+    	BaasBox.loadCollectionWithParams("drink",{where: "name="+"'"+drink+"'"}).done(function(response){
+            if(response.length!=0){
+          	  $("#error").remove();
+      	  var drink=new Drink_model({
+              nome: response[0].name,
+              id: "id"+response[0].ID
+            });
+            var drink_found=new Drink_collection(drink);
+            var drink_v=new Drink_solo(drink_found);
+            window.$('#result').after(drink_v.render().$el);
+          }
+            else{
+          	  $("#result").remove();
+          	  $("#error").append("<br>Drink non trovato, inserisci nome corretto");
+            }
+        }).fail(function(error){
+      	  $("#error").append("<br>Errore di connessione riprovare più tardi");
+        });
+    },
+    	
     onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#hideme").show();
     	$("#showme").hide();
     	//loop di tutto il contenuto localStorage for(var key in localStorage)
     	//Funziona con dati locali bisogna estendere
-    	    var ingrediente1=localStorage.getItem("'Gin'");
-    	    var ingrediente2=localStorage.getItem("'Arancia'");
-    	    BaasBox.loadCollectionWithParams("drink",{where: "ingrediente1="+ingrediente1+"AND ingrediente2="+ingrediente2}).done(function(res){
-    	    	debugger
+    	    var ingre1=localStorage.getItem("'Gin'");
+    	    var ingre2=localStorage.getItem("'Arancia'");
+    	    var ingre3="''";
+    	    debugger;
+    	      BaasBox.loadCollectionWithParams("drink",{where: "ingredienti[0]="+ingre1+"OR ingredienti[1]="+ingre1+"OR ingredienti[0]="+ingre2+"OR ingredienti[1]="+ingre2}).done(function(res){
+    	  	    debugger
     	    	//render dei drink ritornati e incapsulamento nella collection 
-    	    	});
+    	      });
     },
 
     

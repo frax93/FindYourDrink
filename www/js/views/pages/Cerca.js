@@ -28,17 +28,22 @@ define(function(require) {
     Cerca: function() {
       var drink=$("#find").attr("value");
       BaasBox.loadCollectionWithParams("drink",{where: "name="+"'"+drink+"'"}).done(function(response){
-        debugger;
+          if(response.length!=0){
+        	  $("#error").remove();
     	  var drink=new drink_model({
             nome: response[0].name,
             id: "id"+response[0].ID
           });
-        var drink_found=new drink_collection(drink);
-        //Render del drink trovato
-        var drink_v=new drink_view(drink_found);
-        window.$('#result').after(drink_v.render().$el);
-      }).fail(function(response){
-
+          var drink_found=new drink_collection(drink);
+          var drink_v=new drink_view(drink_found);
+          window.$('#result').after(drink_v.render().$el);
+        }
+          else{
+        	  $("#result").remove();
+        	  $("#error").append("<br>Drink non trovato, inserisci nome corretto");
+          }
+      }).fail(function(error){
+    	  $("#error").append("<br>Errore di connessione riprovare più tardi");
       });
     },
     onLoad: function(){

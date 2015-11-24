@@ -16,18 +16,20 @@ define(function(require) {
 	collection: collec,
 	id: "Locale",
     className: "bar",
-   events: {
-    	"tap #ciuccio1": "goback",
-    	"onorentiationchange": "mappa"
-    },
 
     initialize: function() {
       // load the precompiled template
+      $(window).on('orientationchange',this.gotomap);
       this.template = Utils.templates.localesolo;
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.loadData);
     },
-
+    
+    gotomap: function(){
+    	 Backbone.history.navigate("Mappa", {
+    	       trigger: true
+    	     });
+    },
     render: function() {
        $(this.el).html(this.template({CollecLocalesolo: this.collection.toJSON()}));
       return this;

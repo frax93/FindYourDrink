@@ -63,6 +63,7 @@ require(['backbone', 'utils'], function(Backbone, Utils) {
           // launch the router
           var router = new AppRouter();
           Backbone.history.start();
+          
         }
       });
     }

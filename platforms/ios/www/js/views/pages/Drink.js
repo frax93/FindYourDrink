@@ -9,9 +9,6 @@ define(function(require) {
   var specificDView = Utils.Page.extend({
 
     constructorName: "specificD",
-	
-	id: "Drink",
-    className: "bar",
    events: {
         "tap #new": "localinew",
     	"tap #ciuccio1": "goback"
@@ -27,8 +24,7 @@ define(function(require) {
     },
 
     render: function() {
-    	debugger;
-       $(this.el).html(this.template({Drinksolo: this.collection.toJSON()}));
+      $(this.el).html(this.template({Drinksolo: this.collection.toJSON()}));
       return this;
     },   
     goback: function() {
@@ -36,7 +32,7 @@ define(function(require) {
     },
     
     loadData: function() {
-    	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	// query DB   sul Locale $(this.el).html(this.template({collec: this.collection.toJSON()}));
     },
 
     

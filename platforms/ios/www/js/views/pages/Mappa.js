@@ -12,9 +12,14 @@ define(function(require) {
     },
 
     initialize: function(options) {
-      // when I am in the DOM, I can start adding all the Leaflet stuff
-    	 this.template = Utils.templates.mappa;
+      // when I am in the DOM, I can start adding all the GOOGLE MAPS stuff
+    	debugger;
+    	$(window).on('orientationchange',this.gotolocale);
+    	this.loadData();
+    	this.template = Utils.templates.mappa;
      	this.listenTo(this, "inTheDOM", this.addMap);
+     	
+     	
     },
 
     render: function(){
@@ -23,17 +28,18 @@ define(function(require) {
     },
 
      
-    goback: function() {
-      window.history.back("specificLView");
-    },
     
     
     loadData: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	debugger;
     },
 
  
- 
+    gotolocale: function(){
+    	window.history.back("Locale");
+    	$(window).off('orientationchange');
+    },
     
   addMap: function() {
 var map;
@@ -81,9 +87,9 @@ navigator.geolocation.getCurrentPosition(function(position){
         case error.UNKNOWN_ERROR:
             x.innerHTML = "An unknown error occurred."
             break;
-    }}); 
-}
-});
+    }});  
+}    
+    });
   return mappaView;
 
 });
