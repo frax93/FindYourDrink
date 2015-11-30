@@ -33,6 +33,7 @@ define(function(require) {
     
     loadData: function() {
     	// query DB   sul Locale $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	
     },
 
     

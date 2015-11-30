@@ -1,11 +1,12 @@
 define(function(require) {
   var Backbone = require("backbone");
-  var Drink_solo=require("views/pages/Drink")
+  var Drink_solo=require("views/pages/Drink");
+  var Drink = require("views/pages/Subdrink");
   var Drink_collection = require("collections/Drink");
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
   
-  var model10 = new Drink_model({
+ /* var model10 = new Drink_model({
         nome: "Abbey",
 		immagine: "abbey.jpg"
     });
@@ -28,7 +29,7 @@ define(function(require) {
    
  
     
-    var Drink=new Drink_collection([model10, model11, model12,model13, model14]);
+    var Drink=new Drink_collection([model10, model11, model12,model13, model14]);*/
 
   var drinkView = Utils.Page.extend({
 
@@ -50,6 +51,16 @@ define(function(require) {
     },
 
     render: function() {
+    	var drinks=new Drink_collection();
+    	for(var key1 in sessionStorage){
+    		 var drink=new Drink_model({
+                 nome: sessionStorage[key1],
+                 id: key1
+               });
+    		 drinks.add(drink);
+    	}
+    	this.collection=drinks;
+    	debugger;
        $(this.el).html(this.template({CollecDrink: this.collection.toJSON()}));
       return this;
     },
@@ -86,15 +97,31 @@ define(function(require) {
     	$("#showme").hide();
     	//loop di tutto il contenuto localStorage for(var key in localStorage)
     	//Funziona con dati locali bisogna estendere
-    	    var ingre1=localStorage.getItem("'Gin'");
-    	    var ingre2=localStorage.getItem("'Arancia'");
-    	    var ingre3="''";
-    	    debugger;
-    	      BaasBox.loadCollectionWithParams("drink",{where: "ingredienti[0]="+ingre1+"OR ingredienti[1]="+ingre1+"OR ingredienti[0]="+ingre2+"OR ingredienti[1]="+ingre2}).done(function(res){
-    	  	    debugger
-    	    	//render dei drink ritornati e incapsulamento nella collection 
-    	      });
-    },
+    	/* "(ingrediente1="+ingre1+"OR ingrediente2="+ingre2+")OR" +
+	      		"(ingrediente1="+ingre2+"OR ingrediente2="+ingre1+")OR (ingrediente1="+ingre1+"OR " +
+	      				"ingrediente3="+ingre3+"(OR ingrediente1="+ingre3+"OR ingrediente3="+ingre1+"OR  (ingrediente2="+ingre2+"OR" +
+	    	      				"ingrediente3="+ingre3+"(OR ingrediente2="+ingre3+"OR ingrediente3="+ingre2*/
+    	for(var key1 in localStorage){
+        	for(var key2 in localStorage){
+    	var ingre1=localStorage.getItem(key1);
+	    var ingre2=localStorage.getItem(key2);
+	      BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
+	    	  sessionStorage.setItem("id"+res[0].ID,res[0].name);
+	    	  debugger;
+	    	  /*var drink_collection= new Drink_collection();
+	             for(var key_res in res){
+	                var drink_model= new Drink_model({
+	                  nome: res[key_res].name,
+	                  id: "id"+res[key_res].ID
+	                });
+	                drink_collection.add(drink_model);
+	              }
+	              localStorage.setItem("RispostaDrink",drink_collection);
+	              debugger;*/
+	      });
+	      }
+    }
+    	}
 
     
   });

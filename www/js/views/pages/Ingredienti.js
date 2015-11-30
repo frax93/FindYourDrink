@@ -6,6 +6,9 @@ define(function(require) {
   var Utils = require("utils");
   var MyCollection = require("collections/Ingredienti");
   var Ingrediente = require("models/Ingrediente");
+  var Drink = require("views/pages/Drinks");
+  var Drink_collection = require("collections/Drink");
+  var Drink_model = require("models/Drink");
   var spinner=require("spinner");
 
   var Ingredienti = Utils.Page.extend({
@@ -49,7 +52,8 @@ define(function(require) {
       "default": "frutta",
       "tap #tool1": "frutta",
       "tap #tool2": "alcolici",
-      "tap #tool3": "altro"
+      "tap #tool3": "altro",
+    	  "tap #showme":"goToDrink"
       
     },
 
@@ -132,14 +136,17 @@ define(function(require) {
       //spinner.spin(document.body);
     	$("#hideme").hide();
     	$("#showme").show();
+    	
     },
 
 
 
     goToDrink: function(event) {
-      Backbone.history.navigate("drink", {
-        trigger: true
-      });
+
+       	 Backbone.history.navigate("Drinks", {
+           trigger: true
+         });
+       
     }
   });
 

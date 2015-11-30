@@ -19,7 +19,6 @@ define(function(require) {
       "tap #spec": "specifico",
       "tap #new": "locali",
       "tap #spec2": "specificol",
-      "tap #mappa": "mappa"
     },
 
     initialize: function(options) {
