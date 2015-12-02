@@ -43,6 +43,8 @@ define(function(require) {
     // generic go-back function
     //Mirco: Quesito3
     goBack: function() {
+      localStorage.clear();
+      sessionStorage.clear();
       window.history.back("Ingredienti");
     },
 
