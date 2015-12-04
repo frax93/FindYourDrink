@@ -42,7 +42,7 @@ define(function(require) {
 
     // generic go-back function
     //Mirco: Quesito3
-    goBack: function() {
+    goBack: function(){
       window.history.back("Ingredienti");
     },
 

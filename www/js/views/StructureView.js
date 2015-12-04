@@ -42,9 +42,7 @@ define(function(require) {
 
     // generic go-back function
     //Mirco: Quesito3
-    goBack: function() {
-      localStorage.clear();
-      sessionStorage.clear();
+    goBack: function(){
       window.history.back("Ingredienti");
     },
 

@@ -46,38 +46,17 @@ define(function(require) {
 		
       // load the precompiled template
       this.template = Utils.templates.drink;
-      BAASBOX_URL="http://localhost:9000";
-      BAASBOX_APP_CODE="1234567890";
-      BAASBOX_USER="admin";
-      BAASBOX_PASSWORD="admin";
-    
-      //initialize BaasBox
-      BaasBox.setEndPoint(BAASBOX_URL); //the address of your BaasBox server
-      BaasBox.appcode =BAASBOX_APP_CODE;               //the application code of your server
-      
-  
-      //at the moment we log in as admin  
-      BaasBox.login(BAASBOX_USER,BAASBOX_PASSWORD)
-        .done(function (user) {
-            console.log("Logged in ", user);
-        })
-        .fail(function (err) {
-          console.log("error ", err);
-    });
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.onload());
     },
 
     render: function() {
-    	
     	debugger;
        $(this.el).html(this.template({CollecDrink: this.collection.toJSON()}));
       return this;
     },
  
-    goback: function() {
-      window.history.back("myview");
-    },
+
     drinksolo: function(){
     	//Aggiungere presa del nome del drink da html dinamicamente
     	var drink="Abbey";
@@ -117,6 +96,7 @@ define(function(require) {
 	    var ingre2=localStorage.getItem(key2);
 	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
 	    	  sessionStorage.setItem("id"+res[0].ID,res[0].name);
+	    	  
 	    	  //ATTENZIONE BISOGNA AGGIUNGERE QUESTO FORSE localStorage.setItem("ripple-last-load": "{"time":1448897129514,"counter":0}");
 	    	  debugger;
 	    	  /*var drink_collection= new Drink_collection();
@@ -131,20 +111,19 @@ define(function(require) {
 	              debugger;*/
 	      });
 	      }
-    }
-    var drinks=new Drink_collection();
-    	     for(var key1 in sessionStorage){
-    		   var drink=new Drink_model({
-                 nome: sessionStorage[key1],
-                 id: key1
-               });
-    		 drinks.add(drink);
-    	}
-    	this.collection=drinks;
-    	debugger;
-    	}
 
-    
+    }    	
+	  var drinks=new Drink_collection();
+	     for(var key1 in sessionStorage){
+		   var drink=new Drink_model({
+          nome: sessionStorage[key1],
+          id: key1
+        });
+		 drinks.add(drink);
+	}
+	this.collection=drinks;
+	debugger;
+    }
   });
 
   return drinkView;

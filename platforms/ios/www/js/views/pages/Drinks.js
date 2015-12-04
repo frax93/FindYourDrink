@@ -51,23 +51,12 @@ define(function(require) {
     },
 
     render: function() {
-    	var drinks=new Drink_collection();
-    	for(var key1 in sessionStorage){
-    		 var drink=new Drink_model({
-                 nome: sessionStorage[key1],
-                 id: key1
-               });
-    		 drinks.add(drink);
-    	}
-    	this.collection=drinks;
     	debugger;
        $(this.el).html(this.template({CollecDrink: this.collection.toJSON()}));
       return this;
     },
  
-    goback: function() {
-      window.history.back("myview");
-    },
+
     drinksolo: function(){
     	//Aggiungere presa del nome del drink da html dinamicamente
     	var drink="Abbey";
@@ -105,8 +94,10 @@ define(function(require) {
         	for(var key2 in localStorage){
     	var ingre1=localStorage.getItem(key1);
 	    var ingre2=localStorage.getItem(key2);
-	      BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
+	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
 	    	  sessionStorage.setItem("id"+res[0].ID,res[0].name);
+	    	  
+	    	  //ATTENZIONE BISOGNA AGGIUNGERE QUESTO FORSE localStorage.setItem("ripple-last-load": "{"time":1448897129514,"counter":0}");
 	    	  debugger;
 	    	  /*var drink_collection= new Drink_collection();
 	             for(var key_res in res){
@@ -120,10 +111,19 @@ define(function(require) {
 	              debugger;*/
 	      });
 	      }
-    }
-    	}
 
-    
+    }    	
+	  var drinks=new Drink_collection();
+	     for(var key1 in sessionStorage){
+		   var drink=new Drink_model({
+          nome: sessionStorage[key1],
+          id: key1
+        });
+		 drinks.add(drink);
+	}
+	this.collection=drinks;
+	debugger;
+    }
   });
 
   return drinkView;
