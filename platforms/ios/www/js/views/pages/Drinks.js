@@ -1,45 +1,33 @@
 define(function(require) {
   var Backbone = require("backbone");
   var Drink_solo=require("views/pages/Drink");
-  var Drink = require("views/pages/Subdrink");
   var Drink_collection = require("collections/Drink");
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
   
- /* var model10 = new Drink_model({
-        nome: "Abbey",
-		immagine: "abbey.jpg"
-    });
-     var model11 = new Drink_model({
-        nome: "Americano",
-		immagine: "Americano.jpg"
-    });
-    var model12 = new Drink_model({
-        nome: "Alexander",
-		immagine: "ALEXANDER.jpg"
-    });
-    var model13 = new Drink_model({
-        nome: "Angelface",
-		immagine: "angelface.jpg"
-    });
-     var model14 = new Drink_model({
-        nome: "Apotheke",
-		immagine: "apotheke.jpg"
-    });
-   
- 
-    
-    var Drink=new Drink_collection([model10, model11, model12,model13, model14]);*/
-
   var drinkView = Utils.Page.extend({
 
     constructorName: "drinkView",
-	collection: Drink,
 	id: "Drink",
     className: "bar",
    events: {
     	"tap #ciuccio1": "goback",
-    	"tap .tap": "drinksolo"
+    	"tap .tap": "drinksolo",
+    	"tap #id1": "selected",
+        "tap #id2": "selected",
+        "tap #id3": "selected",
+        "tap #id4": "selected",
+        "tap #id5": "selected",
+        "tap #id6": "selected",
+        "tap #id7": "selected",
+        "tap #id8": "selected",
+        "tap #id9": "selected",
+        "tap #id10": "selected",
+        "tap #id11": "selected",
+        "tap #id12": "selected",
+        "tap #id13": "selected",
+        "tap #id14": "selected",
+        "tap #id15": "selected",
     },
 
     initialize: function() {
@@ -96,19 +84,6 @@ define(function(require) {
 	    var ingre2=localStorage.getItem(key2);
 	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
 	    	  sessionStorage.setItem("id"+res[0].ID,res[0].name);
-	    	  
-	    	  //ATTENZIONE BISOGNA AGGIUNGERE QUESTO FORSE localStorage.setItem("ripple-last-load": "{"time":1448897129514,"counter":0}");
-	    	  debugger;
-	    	  /*var drink_collection= new Drink_collection();
-	             for(var key_res in res){
-	                var drink_model= new Drink_model({
-	                  nome: res[key_res].name,
-	                  id: "id"+res[key_res].ID
-	                });
-	                drink_collection.add(drink_model);
-	              }
-	              localStorage.setItem("RispostaDrink",drink_collection);
-	              debugger;*/
 	      });
 	      }
 
@@ -119,10 +94,18 @@ define(function(require) {
           nome: sessionStorage[key1],
           id: key1
         });
-		 drinks.add(drink);
+		drinks.add(drink);
 	}
 	this.collection=drinks;
-	debugger;
+    },
+    
+    selected: function(event){
+    	var id = event.target.id;
+    	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
+    		debugger;
+    	     sessionStorage.setItem("selezionato",res[0].name);
+    	     Backbone.history.navigate("Drink",{trigger: true});
+    	});
     }
   });
 
