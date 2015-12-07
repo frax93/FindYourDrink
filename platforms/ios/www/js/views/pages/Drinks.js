@@ -83,7 +83,8 @@ define(function(require) {
     	var ingre1=localStorage.getItem(key1);
 	    var ingre2=localStorage.getItem(key2);
 	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
-	    	  sessionStorage.setItem("id"+res[0].ID,res[0].name);
+	    	  sessionStorage.setItem(res[0].ident,res[0].name);
+	    	  debugger;
 	      });
 	      }
 
@@ -102,8 +103,8 @@ define(function(require) {
     selected: function(event){
     	var id = event.target.id;
     	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
-    		debugger;
-    	     sessionStorage.setItem("selezionato",res[0].name);
+    	     sessionStorage.setItem("selezionato_nome",res[0].name);
+    	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
     	     Backbone.history.navigate("Drink",{trigger: true});
     	});
     }

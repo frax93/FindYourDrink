@@ -1,5 +1,6 @@
-<div class="box">
+  <div class="content">
 <ul class="table-view">
+
 {{#each Drinksolo}}
   <li class="table-view-cell media" id="new">
     <a class="navigate-right">
@@ -10,10 +11,9 @@
     </a>
   </li>
   <div>
-   descrizione del drink specifico 
-   selezionato nella view drink 
-   precedente
+  {{this.descrizione}}
   </div>
 </ul>
-</div>
+
 {{/each}}
+ </div>
