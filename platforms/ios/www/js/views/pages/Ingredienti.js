@@ -17,6 +17,7 @@ define(function(require) {
 
 
     initialize: function() {
+    
       // load the precompiled template
       this.template = Utils.templates.ingredienti;
       // here we can register to inTheDOM or removing events
@@ -39,7 +40,6 @@ define(function(require) {
         .fail(function (err) {
           console.log("error ", err);
     });
-     
       // by convention, all the inner views of a view must be stored in this.subViews
 	},
 
@@ -65,7 +65,6 @@ define(function(require) {
 
       //Mirco: Quesito1
       this.$el.trigger("default");
-
       return this;
     },
     //FARE IL .fail in frutta,alcolici e altro
