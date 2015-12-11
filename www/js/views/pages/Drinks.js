@@ -34,11 +34,12 @@ define(function(require) {
       // load the precompiled template
       this.template = Utils.templates.drink;
       // here we can register to inTheDOM or removing events
+      sessionStorage.removeItem("selezionato_nome");
+      sessionStorage.removeItem("selezionato_desc");
       this.listenTo(this, "inTheDOM", this.onload());
     },
 
     render: function() {
-    	debugger;
        $(this.el).html(this.template({CollecDrink: this.collection.toJSON()}));
       return this;
     },
@@ -83,7 +84,6 @@ define(function(require) {
 	    var ingre2=localStorage.getItem(key2);
 	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
 	    	  sessionStorage.setItem(res[0].ident,res[0].name);
-	    	  debugger;
 	      });
 	      }
 

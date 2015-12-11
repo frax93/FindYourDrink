@@ -27,9 +27,7 @@ define(function(require) {
       $(this.el).html(this.template({Drinksolo: this.collection.toJSON()}));
       return this;
     },   
-    goback: function() {
-      window.history.back("drinkView");
-    },
+ 
     
     loadData: function() {
     	// query DB   sul Locale $(this.el).html(this.template({collec: this.collection.toJSON()}));
