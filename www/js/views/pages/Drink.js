@@ -11,7 +11,7 @@ define(function(require) {
     constructorName: "specificD",
    events: {
         "tap #new": "localinew",
-    	"tap #ciuccio1": "goback"
+    	"tap #star":"add_preferiti"
     },
 
     initialize: function(Collection) {
@@ -37,6 +37,17 @@ define(function(require) {
     	var drink_collection=new Drink_collection(drink_solo);
     	this.collection= drink_collection;
     },
+    add_preferiti: function(event) {
+    	$("#star").removeClass("icon-star");
+    	$("#star").addClass("icon-star-filled");
+    	$("#star").css("color","#FFD700");
+    	var drink_value=$(".media-body").attr("value");
+    	var drink={ "drink" : drink_value};
+    	BaasBox.createCollection("Preferiti").done(function(res){
+    		BaasBox.save(drink,"Preferiti");
+    	});
+    	
+    }
 
     
   });
