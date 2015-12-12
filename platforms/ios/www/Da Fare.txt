@@ -1,0 +1,7 @@
+1)Ingredienti immagini trasparenti
+2)Immagini Locali ed inserire su BaasBox
+3)Titolo Dinamico
+4)Preferiti V
+5)Drink Analcolici
+6)Sistemare Grafica dell'app
+7)GoBack diverse per ogni view

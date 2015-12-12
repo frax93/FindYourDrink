@@ -1,10 +1,7 @@
-  <div class="content" content="width=device-width, initial-scale=1.0">
-
 {{#each Drinksolo}}
   <li class="table-view-cell media" id="new">
-    <a class="navigate-right">
-      <img class="media-object pull-left drinkunico" src="drink/{{this.nome}}.jpg">
-      <div class="media-body">
+      <img class="media-object drinkunico" src="drink/{{this.nome}}.jpg">
+      <div class="media-body" value="{{this.nome}}">
         {{this.nome}}
       </div>
     </a>
@@ -12,6 +9,6 @@
   <div>
   {{this.descrizione}}
   </div>
-
+<span class="icon icon-star" id="star"></span>
 {{/each}}
  </div>

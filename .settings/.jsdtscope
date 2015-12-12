@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject">
+		<attributes>
+			<attribute name="hide" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
 	<classpathentry excluding="test/fixtures/default/|**/bower_components/*|test/|**/node_modules/*|**/*.min.js" kind="src" path="node_modules/help"/>
 	<classpathentry excluding="**/bower_components/*|**/node_modules/*|fixtures/default/|**/*.min.js" kind="src" path="node_modules/help/test"/>
 	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="node_modules/help/test/fixtures/default"/>
