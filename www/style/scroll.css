@@ -6,10 +6,3 @@
     overflow: scroll;
 }
 
-.table-view {
-    border: 1px solid transaprent;
-    margin-top:10px !important;
-    width: 110%;
-    height: 120% !important;
-    overflow: scroll;
-}

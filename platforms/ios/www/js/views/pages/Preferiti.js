@@ -16,6 +16,7 @@ define(function(require) {
 
     initialize: function() {
       // load the precompiled template
+    	this.template = Utils.templates.drink;
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.loadData());
     },
@@ -48,7 +49,6 @@ define(function(require) {
         drink_collection.add(drink_model);
         //}
         this.collection=drink_collection;
-        this.template = Utils.templates.drink;
     },
 
     
