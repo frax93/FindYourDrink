@@ -10,7 +10,7 @@ define(function(require) {
 
     constructorName: "specificD",
    events: {
-        "tap #new": "localinew",
+        "tap #new": "gotoLocale",
     	"tap #star":"add_preferiti"
     },
 
@@ -36,6 +36,9 @@ define(function(require) {
     	drink_solo.attributes.descrizione=sessionStorage.getItem("selezionato_desc");
     	var drink_collection=new Drink_collection(drink_solo);
     	this.collection= drink_collection;
+    },
+    gotoLocale: function(){
+       Backbone.history.navigate("Locali",{trigger: true});  
     },
     add_preferiti: function(event) {
     	$("#star").removeClass("icon-star");

@@ -3,38 +3,26 @@ define(function(require) {
   var localic = require("collections/Locali");
   var localim = require("models/Locali");
   var Utils = require("utils");
-  
-  var model10 = new localim({
-        nome: "LOCALE1",
-		immagine: "locale1.jpg"
-    });
-     var model11 = new localim({
-        nome: "LOCALE2",
-		immagine: "locale2.jpg"
-    });
-    var model12 = new localim({
-        nome: "LOCALE3",
-		immagine: "locale3.jpg"
-    });
-     var model13 = new localim({
-        nome: "LOCALE4",
-		immagine: "locale4.jpg"
-    });
-   
- 
-    
-    var collec=new localic([model10, model11,model12, model13]);
 
   var localiView = Utils.Page.extend({
 
     constructorName: "localiView",
-	collection: collec,
 	id: "Locali",
     className: "bar",
    events: {
         "tap #speclocal": "localinew",
     	"tap #ciuccio1": "goback",
-    	"scroll " : "scrollfun"
+    	"tap #id1": "selected",
+        "tap #id2": "selected",
+        "tap #id3": "selected",
+        "tap #id4": "selected",
+        "tap #id5": "selected",
+        "tap #id6": "selected",
+        "tap #id7": "selected",
+        "tap #id8": "selected",
+        "tap #id9": "selected",
+        "tap #id10": "selected",
+        "tap #id11": "selected"
     },
 
     initialize: function() {
@@ -49,12 +37,7 @@ define(function(require) {
        $(this.el).html(this.template({CollecLocali: this.collection.toJSON()}));
       return this;
     },   
-    scrollfun: function (){
-         
-    },
-    localinew: function (){
-         
-    },
+
     goback: function() {
       window.history.back("drinkView");
     },
@@ -62,10 +45,35 @@ define(function(require) {
     onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").show();
+    	var drink=sessionStorage.getItem("selezionato_nome");
+	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){
+	    	  for(var key1 in res)
+	    	      sessionStorage.setItem(res[key1].name,res[key1].via);
+	    });    	
+	  var locali=new localic();
+	     for(var key1 in sessionStorage){
+		   var locale=new localim({
+          nome: sessionStorage[key1],
+          id: key1
+        });
+		locali.add(locale);
+	}
+	this.collection=locali;
     },
+    
+     selected: function(event){
+    	var id = event.target.id;
+    	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){
+    	     sessionStorage.setItem("selezionato_nome",res[0].name);
+    	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
+    	     Backbone.history.navigate("Locale",{trigger: true});
+    	});
+    }
 
     
   });
+  
+  
 
   return localiView;
 
