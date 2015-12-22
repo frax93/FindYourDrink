@@ -21,16 +21,14 @@ define(function(require) {
         "tap #id7": "selected",
         "tap #id8": "selected",
         "tap #id9": "selected",
-        "tap #id10": "selected",
-        "tap #id11": "selected"
+        "tap #id10": "selected"
     },
 
     initialize: function() {
-		
       // load the precompiled template
       this.template = Utils.templates.locali;
       // here we can register to inTheDOM or removing events
-      this.listenTo(this, "inTheDOM", this.loadData);
+      this.listenTo(this, "inTheDOM", this.onload());
     },
 
     render: function() {
@@ -46,26 +44,27 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").show();
     	var drink=sessionStorage.getItem("selezionato_nome");
-	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){
+    	debugger;
+	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){ 
 	    	  for(var key1 in res)
 	    	      sessionStorage.setItem(res[key1].name,res[key1].via);
-	    });    	
+	    }).fail(function(error){debugger;});    	
 	  var locali=new localic();
 	     for(var key1 in sessionStorage){
 		   var locale=new localim({
-          nome: sessionStorage[key1],
-          id: key1
+          nome: key1,
         });
 		locali.add(locale);
 	}
+	debugger;
 	this.collection=locali;
     },
     
      selected: function(event){
     	var id = event.target.id;
     	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){
-    	     sessionStorage.setItem("selezionato_nome",res[0].name);
-    	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
+    	     localStorage.setItem("selezionato_nome",res[0].name);
+    	     localStorage.setItem("selezionato_desc",res[0].descrizione);
     	     Backbone.history.navigate("Locale",{trigger: true});
     	});
     }

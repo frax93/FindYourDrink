@@ -102,7 +102,7 @@ define(function(require) {
     selected: function(event){
     	var id = event.target.id;
     	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
-    	     sessionStorage.setItem("selezionato_nome",res[0].name);
+    	     sessionStorage.setItem("selezionato_nome","'"+res[0].name+"'");
     	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
     	     Backbone.history.navigate("Drink",{trigger: true});
     	});
