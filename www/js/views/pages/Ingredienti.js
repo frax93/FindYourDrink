@@ -80,7 +80,8 @@ define(function(require) {
                 collect.add(model);
               }
              var frutta_view=new Frutta(collect);
-             window.$('.img').remove();
+             window.$('#Alcolici').remove();
+             window.$('#Altro').remove();
              spinner.stop();
              window.$('.segmented-control').after(frutta_view.render().$el);
              localStorage.getItem("Arancia");
@@ -101,7 +102,8 @@ define(function(require) {
              collect.add(ingrediente_model);
            }
           var alcolici_view=new Alcolici(collect);
-          window.$('.img').remove();
+          window.$('#Frutta').remove();
+          window.$('#Altro').remove();
           spinner.stop();
           window.$('.segmented-control').after(alcolici_view.render().$el);
           
@@ -121,7 +123,8 @@ define(function(require) {
                 altro_collection.add(ingrediente_model);
               }
              var altro_view=new Altro(altro_collection);
-             window.$('.img').remove();
+             window.$('#Alcolici').remove();
+             window.$('#Frutta').remove();
              spinner.stop();
              window.$('.segmented-control').after(altro_view.render().$el);
              

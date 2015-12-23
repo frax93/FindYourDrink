@@ -6,7 +6,7 @@ define(function(require) {
   var Utils = require("utils");
 
   var subview1 = Utils.Page.extend({
-    id: "s1",
+    id: "Frutta",
 
     constructorName: "subview",
 	

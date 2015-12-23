@@ -20,7 +20,6 @@ define(function(require) {
       this.template = Utils.templates.drinksolo;
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.loadData());
-      //this.collection=Collection;
     },
 
     render: function() {
@@ -41,14 +40,30 @@ define(function(require) {
        Backbone.history.navigate("Locali",{trigger: true});  
     },
     add_preferiti: function(event) {
-    	$("#star").removeClass("icon-star");
-    	$("#star").addClass("icon-star-filled");
-    	$("#star").css("color","#FFD700");
-    	var drink_value=$(".media-body").attr("value");
-    	var drink={ "drink" : drink_value};
-    	BaasBox.createCollection("Preferiti").done(function(res){
-    		BaasBox.save(drink,"Preferiti");
-    	});
+    	if($("#star").hasClass("icon-star")){
+    	   $("#star").removeClass("icon-star");
+    	   $("#star").addClass("icon-star-filled");
+    	   $("#star").css("color","#FFD700");
+    	   var drink_value=$(".media-body").attr("value");
+    	   var drink={ "drink" : drink_value};
+     	   BaasBox.createCollection("Preferiti").done(function(res){
+    		  BaasBox.save(drink,"Preferiti");
+    	   });
+    	}
+    	else{
+    	   $("#star").addClass("icon-star");
+     	   $("#star").removeClass("icon-star-filled");
+     	  $("#star").css("color","black");
+     	  var drink_value=$(".media-body").attr("value");
+     	  BaasBox.deleteCollection("Preferiti");
+     	 /*Bisogna vedere come fare 
+     	  BaasBox.delete("","Preferiti").done(function(res) {
+     	    console.log("res ", res);
+     	  })
+     	  .fail(function(error) {
+     	    console.log("error ", error);
+     	  });*/
+    	}
     	
     }
 

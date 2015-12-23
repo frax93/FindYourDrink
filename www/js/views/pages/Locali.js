@@ -32,7 +32,7 @@ define(function(require) {
     },
 
     render: function() {
-       $(this.el).html(this.template({CollecLocali: this.collection.toJSON()}));
+       $(this.el).html(this.template());
       return this;
     },   
 
@@ -44,20 +44,10 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").show();
     	var drink=sessionStorage.getItem("selezionato_nome");
-    	debugger;
+    	drink="'"+drink+"'";
 	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){ 
-	    	  for(var key1 in res)
-	    	      sessionStorage.setItem(res[key1].name,res[key1].via);
-	    }).fail(function(error){debugger;});    	
-	  var locali=new localic();
-	     for(var key1 in sessionStorage){
-		   var locale=new localim({
-          nome: key1,
-        });
-		locali.add(locale);
-	}
-	debugger;
-	this.collection=locali;
+	    	  $(".media-body").html(res);
+	    }).fail(function(error){});    	
     },
     
      selected: function(event){
