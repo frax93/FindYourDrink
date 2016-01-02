@@ -1,18 +1,2 @@
-.box {
-    border: 1px solid transparent;
-    margin-top: 20px !important;
-    padding: 10px;
-    width: 110%;
-    height: 330px;   
-    overflow: scroll;
-}
 
-.tabella {
-    width: 110%;
-    padding: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: 150% !important;
-    overflow: scroll;
-}
 

@@ -87,3 +87,10 @@ body {
   bottom: 0;
   overflow-y: scroll;
   overflow-x: hidden;  }
+  .locali{
+	width: 110px;
+  			height: 110px !important;
+ 			text-align: center;
+  		    border: 1px solid black;
+}
+  
