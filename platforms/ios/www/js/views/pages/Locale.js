@@ -3,26 +3,15 @@ define(function(require) {
   var localeSc = require("collections/Locale");
   var localeSm = require("models/Locale");
   var Utils = require("utils");
-        
-  var model10 = new localeSm({
-        nome: "LOCALE1",
-		immagine: "locale1.jpg"
-    });
-    
-    var collec=new localeSc([model10]);
-
   var specificLView = Utils.Page.extend({
     constructorName: "Locale",
-	collection: collec,
-	id: "Locale",
-    className: "bar",
 
     initialize: function() {
       // load the precompiled template
       $(window).on('orientationchange',this.gotomap);
       this.template = Utils.templates.localesolo;
       // here we can register to inTheDOM or removing events
-      this.listenTo(this, "inTheDOM", this.loadData);
+      this.listenTo(this, "inTheDOM", this.loadData());
     },
     
     gotomap: function(){
@@ -39,7 +28,12 @@ define(function(require) {
     },
     
     loadData: function() {
-    	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	$("#showme").hide();
+    	var locale=new localeSm();
+    	locale.attributes.nome=sessionStorage.getItem("selezionato_nome_locale");
+    	locale.attributes.descrizione=sessionStorage.getItem("selezionato_desc_locale");
+    	var localec=new localeSc(locale);
+    	this.collection= localec;
     },
 
     

@@ -12,12 +12,12 @@ define({
     structure: "templates/structure.html",
     ingredienti: "templates/ingredienti.html",
     cerca: "templates/cerca.html",
-    drink: "templates/drink.html",
+    list: "templates/list.html",
     drinksolo: "templates/drinksolo.html",
     localesolo: "templates/localesolo.html",
-    locali: "templates/locali.html",
     subview1: "templates/frutta.html",
     subview2: "templates/alcolici.html",
     subview3: "templates/altro.html",
-    mappa: "templates/mappa.html"
+    mappa: "templates/mappa.html",
+    append: "templates/append.html"
 });

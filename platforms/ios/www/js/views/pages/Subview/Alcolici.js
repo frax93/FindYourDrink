@@ -20,20 +20,20 @@ define(function(require) {
    
     
     events: {
-         "tap #id1": "selected",
-         "tap #id2": "selected",
-         "tap #id3": "selected",
-         "tap #id4": "selected",
-         "tap #id5": "selected",
-         "tap #id6": "selected",
-         "tap #id7": "selected",
-         "tap #id8": "selected",
-         "tap #id9": "selected",
-         "tap #id10": "selected",
-         "tap #id11": "selected",
-         "tap #id12": "selected",
          "tap #id13": "selected",
          "tap #id14": "selected",
+         "tap #id15": "selected",
+         "tap #id16": "selected",
+         "tap #id17": "selected",
+         "tap #id18": "selected",
+         "tap #id19": "selected",
+         "tap #id20": "selected",
+         "tap #id21": "selected",
+         "tap #id22": "selected",
+         "tap #id23": "selected",
+         "tap #id24": "selected",
+         "tap #id25": "selected",
+         "tap #id26": "selected",
     },
 
     render: function() {
@@ -47,26 +47,20 @@ define(function(require) {
      selected: function(event){
     	 var id = event.target.id;
          var selezione=$("#"+id+".current").attr("value");
-     		if(this.$('input[type="checkbox"]').hasClass('not-checked')){
-     		        this.$('input[type="checkbox"]').removeClass('not-checked');
+     		if(this.$("#"+id).hasClass('not-checked')){
+     		        this.$("#"+id).removeClass('not-checked');
      		   		this.$("#"+id).addClass('active');
-     		   	    this.$("#"+id).css("color","white");
-     		   		localStorage.setItem(selezione,selezione);
+     		   		this.$("#"+id).css("color","white");
+     		   	    sessionStorage.setItem(event.target.id[2]+event.target.id[3],selezione);
      		}
      	    else {
      	        this.$("#"+id).removeClass('active');
      	        this.$("#"+id).css("color","#007aff");
-     	        this.$('input[type="checkbox"]').addClass('not-checked');
-     	        localStorage.removeItem(selezione);
+     	        this.$("#"+id).addClass('not-checked');
+     	        sessionStorage.removeItem(event.target.id[2]+event.target.id[3]);
      	    }
        },
     
-    /*NON SERVE loadData
-    loadData: function() {
-    	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
-      
-    },
-*/
   });
 
   return subview2;

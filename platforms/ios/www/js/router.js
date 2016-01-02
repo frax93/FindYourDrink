@@ -33,7 +33,15 @@ define(function(require) {
     firstView: "Ingredienti",
 
     initialize: function(options) {
-      this.currentView = undefined;
+    	BAASBOX_URL="http://localhost:9000";
+        BAASBOX_APP_CODE="1234567890";
+        BAASBOX_USER="admin";
+        BAASBOX_PASSWORD="admin";
+      
+        //initialize BaasBox
+        BaasBox.setEndPoint(BAASBOX_URL); //the address of your BaasBox server
+        BaasBox.appcode =BAASBOX_APP_CODE;               //the application code of your server
+        this.currentView = undefined;
     },
 
     ingredienti: function() {
@@ -95,7 +103,6 @@ define(function(require) {
     mappa: function() {
         // create the view and show it
         var page = new MappaView();
-        
         this.changePage(page);
         
       },

@@ -2,15 +2,13 @@ define(function(require) {
   var Backbone = require("backbone");
   var localic = require("collections/Locali");
   var localim = require("models/Locali");
+  var ListView=require("views/pages/Subview/List");
   var Utils = require("utils");
 
   var localiView = Utils.Page.extend({
 
     constructorName: "localiView",
-	id: "Locali",
-    className: "bar",
    events: {
-        "tap #speclocal": "localinew",
     	"tap #ciuccio1": "goback",
     	"tap #id1": "selected",
         "tap #id2": "selected",
@@ -26,9 +24,9 @@ define(function(require) {
 
     initialize: function() {
       // load the precompiled template
-      this.template = Utils.templates.locali;
+      this.template = Utils.templates.append;
       // here we can register to inTheDOM or removing events
-      this.listenTo(this, "inTheDOM", this.onload());
+      this.listenTo(this, "inTheDOM", this.onload);
     },
 
     render: function() {
@@ -42,19 +40,31 @@ define(function(require) {
     
     onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
-    	$("#showme").show();
+    	$("#showme").hide();
     	var drink=sessionStorage.getItem("selezionato_nome");
     	drink="'"+drink+"'";
+    	var collection=new localic();
 	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){ 
-	    	  $(".media-body").html(res);
+	    	for(var key2 in res){
+	  	    	  var model = new localim({
+	  	    		id: res[key2].ident,
+	  	    		nome: res[key2].name,
+	  	    		cartella: "locali"
+	  	    	  }); 
+	  	    	  collection.add(model);
+	  	    	 }
+  	var page = new ListView({
+			collection: collection
+		  });
+   window.$('#append').after(page.render().$el);
 	    }).fail(function(error){});    	
     },
     
      selected: function(event){
     	var id = event.target.id;
-    	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){
-    	     localStorage.setItem("selezionato_nome",res[0].name);
-    	     localStorage.setItem("selezionato_desc",res[0].descrizione);
+    	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){		
+    	     sessionStorage.setItem("selezionato_nome_locale",res[0].name);
+    	     sessionStorage.setItem("selezionato_desc_locale",res[0].descrizione);
     	     Backbone.history.navigate("Locale",{trigger: true});
     	});
     }
