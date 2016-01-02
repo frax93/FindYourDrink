@@ -22,38 +22,16 @@ define(function(require) {
       this.template = Utils.templates.ingredienti;
       // here we can register to inTheDOM or removing events
       this.listenTo(this, "inTheDOM", this.onload());
-      BAASBOX_URL="http://localhost:9000";
-      BAASBOX_APP_CODE="1234567890";
-      BAASBOX_USER="admin";
-      BAASBOX_PASSWORD="admin";
-    
-      //initialize BaasBox
-      BaasBox.setEndPoint(BAASBOX_URL); //the address of your BaasBox server
-      BaasBox.appcode =BAASBOX_APP_CODE;               //the application code of your server
-      
-  
-      //at the moment we log in as admin  
-      BaasBox.login(BAASBOX_USER,BAASBOX_PASSWORD)
-        .done(function (user) {
-            console.log("Logged in ", user);
-        })
-        .fail(function (err) {
-          console.log("error ", err);
-    });
       // by convention, all the inner views of a view must be stored in this.subViews
 	},
 
-    id: "ingredienti",
-    className: "bar bar-standard",
-    
-    
    events: {
     
       "default": "frutta",
       "tap #tool1": "frutta",
       "tap #tool2": "alcolici",
       "tap #tool3": "altro",
-    	  "tap #showme":"goToDrink"
+      "tap #showme":"goToDrink"
       
     },
 
@@ -84,7 +62,10 @@ define(function(require) {
              window.$('#Altro').remove();
              spinner.stop();
              window.$('.segmented-control').after(frutta_view.render().$el);
-             localStorage.getItem("Arancia");
+             for(var key in sessionStorage){
+          		$("#id"+key).addClass("active");
+          		$("#id"+key).css("color","white");
+          	}
          }).fail(function(error){
         	 
          });
@@ -106,7 +87,10 @@ define(function(require) {
           window.$('#Altro').remove();
           spinner.stop();
           window.$('.segmented-control').after(alcolici_view.render().$el);
-          
+          for(var key in sessionStorage){
+        		$("#id"+key).addClass("active");
+        		$("#id"+key).css("color","white");
+        	}
       }).fail(function(error){
      	 
       });
@@ -127,7 +111,10 @@ define(function(require) {
              window.$('#Frutta').remove();
              spinner.stop();
              window.$('.segmented-control').after(altro_view.render().$el);
-             
+             for(var key in sessionStorage){
+           		$("#id"+key).addClass("active");
+           		$("#id"+key).css("color","white");
+           	}
          }).fail(function(error){
         	 
          });
@@ -135,9 +122,9 @@ define(function(require) {
     
     
     onload: function() {
-      //spinner.spin(document.body);
     	$("#hideme").hide();
     	$("#showme").show();
+    	$("#drink").hide();
     	
     },
 

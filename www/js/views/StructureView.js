@@ -17,6 +17,7 @@ define(function(require) {
       "tap #showme": "drink",
       "tap #hideme": "goBack",
       "tap #spec": "specifico",
+      "tap #drink": "drink",
       "tap #new": "locali",
       "tap #spec2": "specificol",
     },
@@ -31,7 +32,6 @@ define(function(require) {
     },
     
     resize: function(){
-      
     }, 
      
     render: function() {
@@ -42,13 +42,9 @@ define(function(require) {
       return this;
     },
 
-    // rendered: function(e) {
-    // },
-
     // generic go-back function
-    //Mirco: Quesito3
-    goBack: function(){
-      window.history.back("Ingredienti");
+   goBack: function(){
+      window.history.back();
     },
 
     setActiveTabBarElement: function(elementId) {

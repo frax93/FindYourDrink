@@ -1,18 +1,16 @@
 define(function(require) {
   var Backbone = require("backbone");
   var Drink_solo=require("views/pages/Drink");
+  var ListView=require("views/pages/Subview/List");
   var Drink_collection = require("collections/Drink");
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
-  
+  var dm=new Drink_model();
   var drinkView = Utils.Page.extend({
 
     constructorName: "drinkView",
-	id: "Drink",
-    className: "bar",
    events: {
-    	"tap #ciuccio1": "goback",
-    	"tap .tap": "drinksolo",
+	   "tap #drink": "analcolici",
     	"tap #id1": "selected",
         "tap #id2": "selected",
         "tap #id3": "selected",
@@ -29,22 +27,24 @@ define(function(require) {
         "tap #id14": "selected",
         "tap #id15": "selected",
     },
-
+    model: dm, 
     initialize: function() {
       // load the precompiled template
-      this.template = Utils.templates.drink;
+      this.template = Utils.templates.append;
       // here we can register to inTheDOM or removing events
       sessionStorage.removeItem("selezionato_nome");
       sessionStorage.removeItem("selezionato_desc");
-      this.listenTo(this, "inTheDOM", this.onload());
+      this.listenTo(this, "inTheDOM", this.onload);
     },
 
     render: function() {
-       $(this.el).html(this.template({CollecDrink: this.collection.toJSON()}));
+       $(this.el).html(this.template(this.model.toJSON()));
       return this;
     },
  
-
+    analcolici: function(){
+    	debugger;
+    },
     drinksolo: function(){
     	//Aggiungere presa del nome del drink da html dinamicamente
     	var drink="Abbey";
@@ -72,31 +72,29 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#hideme").show();
     	$("#showme").hide();
-    	//loop di tutto il contenuto localStorage for(var key in localStorage)
-    	//Funziona con dati locali bisogna estendere
-    	/* "(ingrediente1="+ingre1+"OR ingrediente2="+ingre2+")OR" +
-	      		"(ingrediente1="+ingre2+"OR ingrediente2="+ingre1+")OR (ingrediente1="+ingre1+"OR " +
-	      				"ingrediente3="+ingre3+"(OR ingrediente1="+ingre3+"OR ingrediente3="+ingre1+"OR  (ingrediente2="+ingre2+"OR" +
-	    	      				"ingrediente3="+ingre3+"(OR ingrediente2="+ingre3+"OR ingrediente3="+ingre2*/
-    	for(var key1 in localStorage){
-        	for(var key2 in localStorage){
-    	var ingre1=localStorage.getItem(key1);
-	    var ingre2=localStorage.getItem(key2);
-	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre2}).done(function(res){
-	    	  sessionStorage.setItem(res[0].ident,res[0].name);
-	      });
-	      }
+    	for(var key in sessionStorage){
+    	   var ingre1=sessionStorage.getItem(key);
+    	   var collection=new Drink_collection();
+	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1}).done(function(res){
+	    		for(var key2 in res){
+		  	    	  var model = new Drink_model({
+		  	    		id: res[key2].ident,
+		  	    		nome: res[key2].name,
+		  	    		cartella: "drink"
+		  	    	  }); 
+		  	    	  collection.add(model);
+		  	    	 }
 
-    }    	
-	  var drinks=new Drink_collection();
-	     for(var key1 in sessionStorage){
-		   var drink=new Drink_model({
-          nome: sessionStorage[key1],
-          id: key1
-        });
-		drinks.add(drink);
-	}
-	this.collection=drinks;
+	    	var page = new ListView({
+	 			collection: collection
+	 		  });
+  	   window.$('#append').after(page.render().$el);
+	    		
+	    	
+	      });
+	    }
+   	
+	
     },
     
     selected: function(event){

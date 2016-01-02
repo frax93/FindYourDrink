@@ -8,8 +8,6 @@ define(function(require) {
   var cerca = Utils.Page.extend({
 
     constructorName: "Cerca",
-    id: "Cerca",
-    className: "bar bar-nav",
     
     initialize: function(options) {
        this.template = Utils.templates.cerca;
@@ -32,10 +30,12 @@ define(function(require) {
         	  $("#error").remove();
     	  var drink=new drink_model({
             nome: response[0].name,
-            id: "id"+response[0].ID
+            id: "id"+response[0].ident
           });
+    	  debugger;
           var drink_found=new drink_collection(drink);
           var drink_v=new drink_view(drink_found);
+          $("#app").after("<div id='result'></div>");
           window.$('#result').after(drink_v.render().$el);
         }
           else{
