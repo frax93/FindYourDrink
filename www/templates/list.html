@@ -1,0 +1,11 @@
+{{#each list}}
+  <div class="table-view-cell" id="{{this.id}}">
+    <div class="navigate-right" id="{{this.id}}" >
+      <img class="media-object pull-left {{this.cartella}}" src="{{this.cartella}}/{{this.nome}}.jpg" id="{{this.id}}">
+      <div  id="{{this.id}}">
+        {{this.nome}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+

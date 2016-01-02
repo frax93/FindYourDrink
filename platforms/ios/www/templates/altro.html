@@ -1,19 +1,15 @@
-<div class="box">
-    <ul class="table-view">
+<div class="page i-container">
+<div class="i-g">
     {{#each collec1}}
-<input type="checkbox" class="not-checked">
-<div class="btn btn-primary btn-block btn-outlined sinistra item2 img" id={{this.id}}>
+<div class="btn btn-primary btn-block btn-outlined not-checked i-5" id={{this.id}}>
       <div id={{this.id}}>
-  	    <img src="ingredienti/Altro/{{this.nome}}.jpg" class="item1" id={{this.id}}>
+  	    <img src="ingredienti/Altro/{{this.nome}}.jpg" class="i-6" id={{this.id}}>
   	    <div id={{this.id}} align="center" class="current" value="'{{this.nome}}'">{{this.nome}}</div>
-  	    </img> 
   	  </div>
 </div>
 {{/each}}
-</ul>
 </div>
-<style>
-input[type="checkbox"]{display:none;}
-</style>
+</div>
+
 
 

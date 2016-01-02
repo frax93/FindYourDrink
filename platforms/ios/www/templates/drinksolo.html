@@ -1,14 +1,12 @@
+<div class="page">
 {{#each Drinksolo}}
-  <li class="table-view-cell media" id="new">
-      <img class="media-object drinkunico" src="drink/{{this.nome}}.jpg">
-      <div class="media-body" value="'{{this.nome}}'">
-        {{this.nome}}
+      <div id="new" align="center"><img class="media" src="drink/{{this.nome}}.jpg"></div>
+      <div align="center">{{this.nome}}</div>
+      <span class="icon icon-star" id="star">Aggiungi ai preferiti</span>
+      <div class="media-body" value="'{{this.nome}}'" id="new"> 
       </div>
-    </a>
-  </li>
   <div>
   {{this.descrizione}}
   </div>
-<span class="icon icon-star" id="star"></span>
 {{/each}}
  </div>

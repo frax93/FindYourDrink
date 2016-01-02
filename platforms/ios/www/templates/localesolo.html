@@ -1,19 +1,10 @@
-<div class="box">
-<ul class="table-view">
 {{#each CollecLocalesolo}}
-  <li class="table-view-cell media" id="mappa">
-    <a class="navigate-right">
-      <img class="media-object pull-left localeunico" src="locali/{{this.immagine}}">
+      <img class="media-object" src="locali/{{this.nome}}.jpg">
       <div class="media-body">
         {{this.nome}}
       </div>
-    </a>
-  </li>
+  <div>{{this.descrizione}}</div>
+  <!--va fatta cosa su misura per il ruota per navigare-->
+  <img class="media-object localeunico" src="locali/ruota.jpg">Ruota per navigare</img>
   {{/each}}
-  <div>
-   descrizione del locale specifico 
-   selezionato nella view locali 
-   precedente
-  </div>
-</ul>
-</div>
+ </div>
