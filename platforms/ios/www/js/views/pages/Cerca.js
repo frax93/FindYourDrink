@@ -47,7 +47,9 @@ define(function(require) {
       });
     },
     onLoad: function(){
-
+    	$("#showme").hide();
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Cerca</h1>");  
     }
   });
 

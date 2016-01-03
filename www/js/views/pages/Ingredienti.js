@@ -40,8 +40,6 @@ define(function(require) {
     	// dopo la view sarà inizialmente vuota e la riempiremo quando arriveranno i dati dalle query fatte al db
     	//$(this.el).html(this.template());   sara' fatto così:
       $(this.el).html(this.template());
-
-      //Mirco: Quesito1
       this.$el.trigger("default");
       return this;
     },
@@ -125,18 +123,10 @@ define(function(require) {
     	$("#hideme").hide();
     	$("#showme").show();
     	$("#drink").hide();
-    	
-    },
-
-
-
-    goToDrink: function(event) {
-
-       	 Backbone.history.navigate("Drinks", {
-           trigger: true
-         });
-       
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Ingredienti</h1>");
     }
+    
   });
 
   return Ingredienti;

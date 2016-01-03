@@ -4,6 +4,7 @@ define(function(require) {
   var localim = require("models/Locali");
   var ListView=require("views/pages/Subview/List");
   var Utils = require("utils");
+  var spinner=require("spinner");
 
   var localiView = Utils.Page.extend({
 
@@ -34,13 +35,11 @@ define(function(require) {
       return this;
     },   
 
-    goback: function() {
-      window.history.back("drinkView");
-    },
-    
     onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").hide();
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Locali</h1>"); 
     	var drink=sessionStorage.getItem("selezionato_nome");
     	drink="'"+drink+"'";
     	var collection=new localic();
@@ -56,12 +55,14 @@ define(function(require) {
   	var page = new ListView({
 			collection: collection
 		  });
+  	spinner.stop();
    window.$('#append').after(page.render().$el);
 	    }).fail(function(error){});    	
     },
     
      selected: function(event){
     	var id = event.target.id;
+    	spinner.spin(document.body);
     	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){		
     	     sessionStorage.setItem("selezionato_nome_locale",res[0].name);
     	     sessionStorage.setItem("selezionato_desc_locale",res[0].descrizione);

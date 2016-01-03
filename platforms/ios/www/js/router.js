@@ -40,7 +40,8 @@ define(function(require) {
       
         //initialize BaasBox
         BaasBox.setEndPoint(BAASBOX_URL); //the address of your BaasBox server
-        BaasBox.appcode =BAASBOX_APP_CODE;               //the application code of your server
+        BaasBox.appcode =BAASBOX_APP_CODE;   
+        BaasBox.login(BAASBOX_USER,BAASBOX_PASSWORD);//the application code of your server
         this.currentView = undefined;
     },
 

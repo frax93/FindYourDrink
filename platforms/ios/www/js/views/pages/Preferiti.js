@@ -26,6 +26,9 @@ define(function(require) {
    
     loadData: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	$("#showme").hide();
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Preferiti</h1>");  
     	var collection= new drinkc();
     	BaasBox.loadCollection("Preferiti").done(function(res){
     		for(var key in res){

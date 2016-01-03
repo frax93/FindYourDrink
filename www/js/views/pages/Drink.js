@@ -3,6 +3,7 @@ define(function(require) {
   var Drink_collection = require("collections/Drink");
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
+  var spinner=require("spinner");
   
 
 
@@ -29,16 +30,20 @@ define(function(require) {
  
     
     loadData: function() {
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Drink</h1>");  
     	if(this.collection==undefined){
     	var drink_solo=new Drink_model();
     	drink_solo.attributes.nome=sessionStorage.getItem("selezionato_nome");
     	drink_solo.attributes.descrizione=sessionStorage.getItem("selezionato_desc");
     	var drink_collection=new Drink_collection(drink_solo);
     	this.collection= drink_collection;
+    	spinner.stop();
     	}
     },
     gotoLocale: function(){
-       Backbone.history.navigate("Locali",{trigger: true});  
+    	  spinner.spin(document.body);
+    	Backbone.history.navigate("Locali",{trigger: true});  
     },
     add_preferiti: function(event) {
     	if($("#star").hasClass("icon-star")){

@@ -1,19 +1,17 @@
 define(function(require) {
   var Backbone = require("backbone");
   var Utils = require("utils");
-    
+  var spinner=require("spinner"); 
 
   var mappaView = Utils.Page.extend({
 
     constructorName: "mappaView",
-    className: "bar",
    events: {
     	"tap #ciuccio1": "goback"
     },
 
     initialize: function(options) {
-      // when I am in the DOM, I can start adding all the GOOGLE MAPS stuff
-    	debugger;
+      // when I am in the DOM, I can start adding all the GOOGLE MAPS stuffs
     	$(window).on('orientationchange',this.gotolocale);
     	this.loadData();
     	this.template = Utils.templates.mappa;
@@ -32,13 +30,16 @@ define(function(require) {
     
     loadData: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
-    	debugger;
+    	$(".title").hide();
+    	$("#hideme").hide();
     },
 
  
     gotolocale: function(){
     	window.history.back("Locale");
     	$(window).off('orientationchange');
+    	$(".title").show();
+    	$("#hideme").show();
     },
     
   addMap: function() {
@@ -87,7 +88,9 @@ navigator.geolocation.getCurrentPosition(function(position){
         case error.UNKNOWN_ERROR:
             x.innerHTML = "An unknown error occurred."
             break;
-    }});  
+    }});
+
+   spinner.stop();
 }    
     });
   return mappaView;

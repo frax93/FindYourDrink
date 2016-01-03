@@ -17,9 +17,7 @@ define(function(require) {
       "tap #showme": "drink",
       "tap #hideme": "goBack",
       "tap #spec": "specifico",
-      "tap #drink": "drink",
-      "tap #new": "locali",
-      "tap #spec2": "specificol",
+      //tap per lo switch analcolici
     },
 
     initialize: function(options) {
@@ -78,18 +76,6 @@ define(function(require) {
       });
     },
     
-    locali: function(event){
-    	 Backbone.history.navigate("Locali", {
-        trigger: true
-      });
-    },
-    
-    specificol: function(event){
-    	 Backbone.history.navigate("Locale", {
-        trigger: true
-      });
-    },
-
     ingredienti: function(event) {
       Backbone.history.navigate("Ingredienti", {
         trigger: true

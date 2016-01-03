@@ -6,11 +6,12 @@ define(function(require) {
   var Drink_model = require("models/Drink");
   var Utils = require("utils");
   var dm=new Drink_model();
+  var spinner=require("spinner");
+  
   var drinkView = Utils.Page.extend({
 
     constructorName: "drinkView",
    events: {
-	   "tap #drink": "analcolici",
     	"tap #id1": "selected",
         "tap #id2": "selected",
         "tap #id3": "selected",
@@ -70,8 +71,11 @@ define(function(require) {
     	
     onload: function() {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
+    	spinner.spin(document.body);
     	$("#hideme").show();
     	$("#showme").hide();
+    	$(".title").remove();
+    	$("#title").after("<h1 class='title prova'>Drinks</h1>");  
     	for(var key in sessionStorage){
     	   var ingre1=sessionStorage.getItem(key);
     	   var collection=new Drink_collection();
@@ -88,8 +92,8 @@ define(function(require) {
 	    	var page = new ListView({
 	 			collection: collection
 	 		  });
-  	   window.$('#append').after(page.render().$el);
-	    		
+	    	spinner.stop();
+  	   window.$('#append').after(page.render().$el);	
 	    	
 	      });
 	    }
@@ -99,6 +103,7 @@ define(function(require) {
     
     selected: function(event){
     	var id = event.target.id;
+    	spinner.spin(document.body);
     	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
     	     sessionStorage.setItem("selezionato_nome",res[0].name);
     	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
