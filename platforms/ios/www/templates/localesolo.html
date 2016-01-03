@@ -1,10 +1,22 @@
 {{#each CollecLocalesolo}}
-      <img class="media-object" src="locali/{{this.nome}}.jpg">
+     <div align="center"> <img class="media-object localeunico" src="locali/{{this.nome}}.jpg">
       <div class="media-body">
         {{this.nome}}
-      </div>
+      </div></div>
+   <br>
+  <b>Descrizione:</b>
   <div>{{this.descrizione}}</div>
-  <!--va fatta cosa su misura per il ruota per navigare-->
-  <img class="media-object localeunico" src="locali/ruota.jpg">Ruota per navigare</img>
+  <br>
+  <div align="center"><img class="media-object rotate" src="locali/ruota.jpg">
+  <div class="media-body">Ruota per navigare</div>
+  </div>
   {{/each}}
- </div>
+ <style>
+ .rotate{
+ 	width: 27%;
+ }
+ .localeunico{ 
+  			width: 70%;
+            margin-top: 5%;
+  		    border: 5px;
+  }</style>

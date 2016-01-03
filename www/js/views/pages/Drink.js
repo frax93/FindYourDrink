@@ -35,6 +35,13 @@ define(function(require) {
     	if(this.collection==undefined){
     	var drink_solo=new Drink_model();
     	drink_solo.attributes.nome=sessionStorage.getItem("selezionato_nome");
+    	BaasBox.loadCollectionWithParams("Preferiti",{where:"drink="+"'"+drink_solo.attributes.nome+"'"}).done(function(res){
+    		if(res[0].drink.lenght!=0){
+    			$("#star").remove();
+    		    $("#star1").append("<span class='icon icon-star-filled' id='star'>Gia' nei preferiti</span>");
+    		    $("#star").css("color","#FFD700");
+    		}
+    		});
     	drink_solo.attributes.descrizione=sessionStorage.getItem("selezionato_desc");
     	var drink_collection=new Drink_collection(drink_solo);
     	this.collection= drink_collection;
@@ -52,12 +59,11 @@ define(function(require) {
     	   $("#star").css("color","#FFD700");
     	   var drink_value=$(".media-body").attr("value");
     	   var drink={ "drink" : drink_value};
-     	   BaasBox.loaCollection("Preferiti").done(function(res){
+     	   BaasBox.loadCollection("Preferiti").done(function(res){
     		  BaasBox.save(drink,"Preferiti");
     	   });
     	}
     	else{
-    		debugger;
     	   $("#star").addClass("icon-star");
      	   $("#star").removeClass("icon-star-filled");
      	  $("#star").css("color","black");
