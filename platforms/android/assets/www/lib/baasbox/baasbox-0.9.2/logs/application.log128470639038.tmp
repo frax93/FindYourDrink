@@ -1,0 +1,20 @@
+2015-12-11 15:24:09,716 - INFO  - BaasBox is starting... 
+2015-12-11 15:24:09,730 - INFO  - System details: 
+2015-12-11 15:24:09,771 - INFO  - {os_name=Mac OS X, os_arch=x86_64, os_version=10.10, processors=8} 
+2015-12-11 15:24:09,772 - INFO  - {max_allocable_memory=3817865216, current_allocate_memory=197132288, used_memory_in_the_allocate_memory=28071064, free_memory_in_the_allocated_memory=169061224} 
+2015-12-11 15:24:09,772 - INFO  - {java_class_version=52.0, java_vendor=Oracle Corporation, java_vendor_url=http://java.oracle.com/, java_version=1.8.0_45} 
+2015-12-11 15:24:09,772 - INFO  - ...Loading plugin... 
+2015-12-11 15:24:10,087 - INFO  - Updating default users passwords... 
+2015-12-11 15:24:10,600 - INFO  - ...looking for evolutions... 
+2015-12-11 15:24:10,618 - INFO  - ...db version is: 0.9.4 
+2015-12-11 15:24:10,668 - INFO  - BaasBox unique id is OTM2NjMxMDAtNzI3Yi0xMWU1LWJkMjgtZDg1MGU2ZGZkNWE5 
+2015-12-11 15:24:10,689 - INFO  - ...done 
+2015-12-11 15:24:10,690 - INFO  - Override settings... 
+2015-12-11 15:24:10,690 - INFO  - ...No setting to override... 
+2015-12-11 15:24:10,690 - INFO  - ...done 
+2015-12-11 15:24:10,705 - INFO  -  
+2015-12-11 15:24:10,705 - INFO  - To login into the administration console go to http://localhost:9000/console 
+2015-12-11 15:24:10,705 - INFO  - Default credentials are: user:admin pass:admin AppCode: 1234567890 
+2015-12-11 15:24:10,705 - INFO  - Documentation is available at http://www.baasbox.com/documentation 
+2015-12-11 15:24:10,705 - INFO  - BaasBox is Ready. 
+2015-12-11 15:24:10,711 - INFO  - Application started (Prod) 

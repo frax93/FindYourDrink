@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.FindYourDrink" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <name>FindYourDrink</name>
+    <description>
+        It's an app that allows to find your favouite drink and it bring you where your drink has prepared 
+    </description>
+    <author email="frank.md93@gmail.com" href="http://cordova.io">
+        FindYourDrink Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>

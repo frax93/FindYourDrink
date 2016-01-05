@@ -76,10 +76,19 @@ define(function(require) {
     	$("#showme").hide();
     	$(".title").remove();
     	$("#title").after("<h1 class='title prova'>Drinks</h1>");  
+ 	   var collection=new Drink_collection();
     	for(var key in sessionStorage){
+    		if(sessionStorage.selezionato_nome||sessionStorage.selezionato_nome_locale){
+    		   sessionStorage.removeItem("selezionato_nome_locale");
+   	           sessionStorage.removeItem("selezionato_desc_locale");
+   	           sessionStorage.removeItem("selezionato_nome");
+   	           sessionStorage.removeItem("selezionato_desc");
+   	        }
+    		baasboxrequest(key);
+    	}
+    		function baasboxrequest(key){
     	   var ingre1=sessionStorage.getItem(key);
-    	   var collection=new Drink_collection();
-	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1}).done(function(res){
+	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1+"OR ingrediente3="+ingre1}).done(function(res){
 	    		for(var key2 in res){
 		  	    	  var model = new Drink_model({
 		  	    		id: res[key2].ident,
@@ -87,18 +96,17 @@ define(function(require) {
 		  	    		cartella: "drink"
 		  	    	  }); 
 		  	    	  collection.add(model);
-		  	    	 }
-
-	    	var page = new ListView({
-	 			collection: collection
-	 		  });
-	    	spinner.stop();
-  	   window.$('#append').after(page.render().$el);	
-	    	
-	      });
+		  	    	  debugger;
+		  	    	  //problema non fa render su array non sequenziale
+		  	    	if(key==sessionStorage[sessionStorage.length]){
+		  		    	var page = new ListView({
+		  		 			collection: collection
+		  		 		  });
+		  		    	spinner.stop();
+		  	  	   window.$('#append').after(page.render().$el);	
+		  	        }
+		  	    	 }});     
 	    }
-   	
-	
     },
     
     selected: function(event){

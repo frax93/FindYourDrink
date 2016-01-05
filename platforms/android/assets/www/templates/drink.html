@@ -1,0 +1,15 @@
+<div class="box">
+    <ul class="table-view">
+{{#each CollecDrink}}
+  <li class="table-view-cell media tap" id="{{this.id}}">
+    <a class="navigate-right" id="{{this.id}}" >
+      <img class="media-object pull-left drinkjj" src="drink/{{this.nome}}.jpg" id="{{this.id}}">
+      <div class="media-body" id="{{this.id}}">
+        {{this.nome}}
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</ul>
+</div>
+
