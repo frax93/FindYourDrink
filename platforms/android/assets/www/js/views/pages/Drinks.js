@@ -27,6 +27,7 @@ define(function(require) {
         "tap #id13": "selected",
         "tap #id14": "selected",
         "tap #id15": "selected",
+        "default":"alcolici"
     },
     model: dm, 
     initialize: function() {
@@ -40,33 +41,17 @@ define(function(require) {
 
     render: function() {
        $(this.el).html(this.template(this.model.toJSON()));
+       this.$el.trigger("default");
       return this;
     },
  
     analcolici: function(){
-    	debugger;
-    },
-    drinksolo: function(){
-    	//Aggiungere presa del nome del drink da html dinamicamente
-    	var drink="Abbey";
-    	BaasBox.loadCollectionWithParams("drink",{where: "name="+"'"+drink+"'"}).done(function(response){
-            if(response.length!=0){
-          	  $("#error").remove();
-      	  var drink=new Drink_model({
-              nome: response[0].name,
-              id: "id"+response[0].ID
-            });
-            var drink_found=new Drink_collection(drink);
-            var drink_v=new Drink_solo(drink_found);
-            window.$('#result').after(drink_v.render().$el);
-          }
-            else{
-          	  $("#result").remove();
-          	  $("#error").append("<br>Drink non trovato, inserisci nome corretto");
-            }
-        }).fail(function(error){
-      	  $("#error").append("<br>Errore di connessione riprovare più tardi");
-        });
+    	if($("#toogle").hasClass("active")){
+    		$("#listview").remove();
+    		var collection=new Drink_collection();
+        	for(var key in sessionStorage)
+    	       baasbox("analcolici",key,collection);
+    	}
     },
     	
     onload: function() {
@@ -75,8 +60,16 @@ define(function(require) {
     	$("#hideme").show();
     	$("#showme").hide();
     	$(".title").remove();
-    	$("#title").after("<h1 class='title prova'>Drinks</h1>");  
- 	   var collection=new Drink_collection();
+    	$("#title").after("<h1 class='title prova'>Drinks</h1>");
+    	if(!$("#toogle").length){
+    	   $("#analcolici").append(" <span class='toggle' id='toogle'><span class='toggle-handle' ></span></span>");
+           $("#toogle").css("left","400px");
+    	}
+    	baasbox=this.baasboxrequest;
+        $("#toogle").on('tap',this.analcolici);
+    },
+    alcolici:function(){
+    	var collection=new Drink_collection();
     	for(var key in sessionStorage){
     		if(sessionStorage.selezionato_nome||sessionStorage.selezionato_nome_locale){
     		   sessionStorage.removeItem("selezionato_nome_locale");
@@ -84,19 +77,20 @@ define(function(require) {
    	           sessionStorage.removeItem("selezionato_nome");
    	           sessionStorage.removeItem("selezionato_desc");
    	        }
-    		baasboxrequest(key);
+    		this.baasboxrequest("drink",key,collection);
     	}
-    		function baasboxrequest(key){
-    	   var ingre1=sessionStorage.getItem(key);
-			debugger;
-	    BaasBox.loadCollectionWithParams("drink",{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1+"OR ingrediente3="+ingre1}).done(function(res){
+    },
+    baasboxrequest:function(table,key,collection){
+ 	   var ingre1=sessionStorage.getItem(key);
+	    BaasBox.loadCollectionWithParams(table,{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1+"OR ingrediente3="+ingre1}).done(function(res){
 	    		for(var key2 in res){
 		  	    	  var model = new Drink_model({
 		  	    		id: res[key2].ident,
 		  	    		nome: res[key2].name,
-		  	    		cartella: "drink"
+		  	    		cartella: table
 		  	    	  }); 
 		  	    	  collection.add(model);
+		  	    	  //problema non fa render su array non sequenziale
 		  	    	if(key==sessionStorage.length){
 		  		    	var page = new ListView({
 		  		 			collection: collection
@@ -105,9 +99,7 @@ define(function(require) {
 		  	  	   window.$('#append').after(page.render().$el);	
 		  	        }
 		  	    	 }});     
-	    }
-    },
-    
+	    },
     selected: function(event){
     	var id = event.target.id;
     	spinner.spin(document.body);

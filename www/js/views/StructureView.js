@@ -42,6 +42,7 @@ define(function(require) {
 
     // generic go-back function
    goBack: function(){
+	  $("#toogle").remove();
       window.history.back();
     },
 
