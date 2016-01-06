@@ -49,13 +49,18 @@ define(function(require) {
     	if($("#toogle").hasClass("active")){
     		$("#listview").remove();
     		var collection=new Drink_collection();
-        	for(var key in sessionStorage)
+    		for(var key=0;key<=sessionStorage.length;key++)
     	       baasbox("analcolici",key,collection);
+    	}
+    	else{
+    		$("#listview").remove();
+    		var collection=new Drink_collection();
+    		for(var key=0;key<=sessionStorage.length;key++)
+    	       baasbox("drink",key,collection);
     	}
     },
     	
     onload: function() {
-    	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	spinner.spin(document.body);
     	$("#hideme").show();
     	$("#showme").hide();
@@ -70,7 +75,7 @@ define(function(require) {
     },
     alcolici:function(){
     	var collection=new Drink_collection();
-    	for(var key in sessionStorage){
+    	for(var key=0;key<=sessionStorage.length;key++){
     		if(sessionStorage.selezionato_nome||sessionStorage.selezionato_nome_locale){
     		   sessionStorage.removeItem("selezionato_nome_locale");
    	           sessionStorage.removeItem("selezionato_desc_locale");
@@ -81,24 +86,29 @@ define(function(require) {
     	}
     },
     baasboxrequest:function(table,key,collection){
- 	   var ingre1=sessionStorage.getItem(key);
+    	var chiave=sessionStorage.key(key);
+ 	   var ingre1=sessionStorage.getItem(chiave);
 	    BaasBox.loadCollectionWithParams(table,{where:"ingrediente1="+ingre1+"OR ingrediente2="+ingre1+"OR ingrediente3="+ingre1}).done(function(res){
-	    		for(var key2 in res){
+	    	     for(var key2 in res){
+	    	    	 if(!$("#"+res[key2].ident).length){
 		  	    	  var model = new Drink_model({
 		  	    		id: res[key2].ident,
 		  	    		nome: res[key2].name,
 		  	    		cartella: table
 		  	    	  }); 
 		  	    	  collection.add(model);
-		  	    	  //problema non fa render su array non sequenziale
-		  	    	if(key==sessionStorage.length){
+	    	    	 }
+	    	    	 }
+		  	    	if(key==sessionStorage.length-1){
 		  		    	var page = new ListView({
 		  		 			collection: collection
 		  		 		  });
 		  		    	spinner.stop();
 		  	  	   window.$('#append').after(page.render().$el);	
-		  	        }
-		  	    	 }});     
+		  	    	 }}).fail(function(error){
+		  	    		 
+		  	    	 });
+       
 	    },
     selected: function(event){
     	var id = event.target.id;
