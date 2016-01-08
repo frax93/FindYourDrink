@@ -42,7 +42,7 @@ define(function(require) {
     	var drink=sessionStorage.getItem("selezionato_nome");
     	drink="'"+drink+"'";
     	var collection=new localic();
-	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink}).done(function(res){ 
+	    BaasBox.loadCollectionWithParams("Locali",{where:"drink1="+drink+"OR drink2="+drink+"OR drink3="+drink}).done(function(res){ 
 	    	navigator.geolocation.getCurrentPosition(function(position){
 	    		//Prendo geo-posizione attuale
 	    		var latitude1=position.coords.latitude;

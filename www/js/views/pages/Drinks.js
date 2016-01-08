@@ -94,7 +94,7 @@ define(function(require) {
 		  	    	  var model = new Drink_model({
 		  	    		id: res[key2].ident,
 		  	    		nome: res[key2].name,
-		  	    		cartella: table
+		  	    		cartella: "drink"
 		  	    	  }); 
 		  	    	  collection.add(model);
 	    	    	 }
@@ -113,11 +113,19 @@ define(function(require) {
     selected: function(event){
     	var id = event.target.id;
     	spinner.spin(document.body);
+    	if(!$("#toogle").hasClass("active")){
     	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
     	     sessionStorage.setItem("selezionato_nome",res[0].name);
     	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
     	     Backbone.history.navigate("Drink",{trigger: true});
     	});
+    	}
+    	else{
+    	BaasBox.loadCollectionWithParams("analcolici",{where:"ident="+"'"+id+"'"}).done(function(res){
+   	     sessionStorage.setItem("selezionato_nome",res[0].name);
+   	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
+   	     Backbone.history.navigate("Drink",{trigger: true});
+   	});}
     }
   });
 
