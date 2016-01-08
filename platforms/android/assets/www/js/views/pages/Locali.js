@@ -88,6 +88,7 @@ window.$('#append').after(page.render().$el);}
     	BaasBox.loadCollectionWithParams("Locali",{where:"ident="+"'"+id+"'"}).done(function(res){		
     	     sessionStorage.setItem("selezionato_nome_locale",res[0].name);
     	     sessionStorage.setItem("selezionato_desc_locale",res[0].descrizione);
+    	     sessionStorage.setItem("sel_loc_mappa",res[0].via);
     	     Backbone.history.navigate("Locale",{trigger: true});
     	});
     }

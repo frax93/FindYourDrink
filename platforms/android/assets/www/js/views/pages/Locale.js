@@ -34,6 +34,7 @@ define(function(require) {
     	var locale=new localeSm();
     	locale.attributes.nome=sessionStorage.getItem("selezionato_nome_locale");
     	locale.attributes.descrizione=sessionStorage.getItem("selezionato_desc_locale");
+    	
     	var localec=new localeSc(locale);
     	this.collection= localec;
     	spinner.stop();
