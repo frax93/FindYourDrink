@@ -47,13 +47,12 @@ define(function(require) {
   var posizione_attuale = {lat: position.coords.latitude, lng: position.coords.longitude };
 	  var geocoder = new google.maps.Geocoder();
 	  var via=sessionStorage.getItem("sel_loc_mappa");
-	  geocoder.geocode({ 'address': via }, function(results, status) {
+	  geocoder.geocode({ 'address': via+",L'Aquila" }, function(results, status) {
 	  if (status == google.maps.GeocoderStatus.OK){
 		//Coordinate del locale
 	    var posizione_locale={
 	    		lat: results[0].geometry.location.lat(),
 	            lng: results[0].geometry.location.lng()};
-
   var map = new google.maps.Map(document.getElementById('map'), {
     center: posizione_attuale,
     scrollwheel: false,
