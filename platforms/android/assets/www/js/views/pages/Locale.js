@@ -23,6 +23,7 @@ define(function(require) {
     	     });
     },
     facebook: function(){
+    	//pop-over con share facebook e twitter
     	var u;
     	var t;
     	var url4Share;
@@ -44,14 +45,15 @@ define(function(require) {
     	$("#showme").hide();
     	$(".title").remove();
     	$("#title").after("<h1 class='title prova'>Locale</h1>");
-    	debugger;
-    	$("#analcolici").append("<span class='icon icon-share' id='social'></span>");
+    	/*$("#analcolici").append("<div class='popover' id='popover'><header class='bar bar-nav'><span class='icon icon-share' id='social'></span></header></div>");
         $("#social").css("left","300px");
-        $("#social").on('tap',this.facebook);
+        $("#social").css("color","white");
+        $("#social").on('tap',this.facebook);*/
     	var locale=new localeSm();
     	locale.attributes.nome=sessionStorage.getItem("selezionato_nome_locale");
     	locale.attributes.descrizione=sessionStorage.getItem("selezionato_desc_locale");
-    	
+    	locale.attributes.orario=sessionStorage.getItem("sel_loc_orario");
+    	locale.attributes.numero=sessionStorage.getItem("sel_loc_numero");	
     	var localec=new localeSc(locale);
     	this.collection= localec;
     	spinner.stop();

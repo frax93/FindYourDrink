@@ -82,6 +82,8 @@ define(function(require) {
    	           sessionStorage.removeItem("selezionato_nome");
    	           sessionStorage.removeItem("selezionato_desc");
    	           sessionStorage.removeItem("sel_loc_mappa");
+   	           sessionStorage.removeItem("sel_loc_orario");
+    	       sessionStorage.removeItem("sel_loc_numero");
    	        }
     		this.baasboxrequest("drink",key,collection);
     	}

@@ -23,17 +23,16 @@ define(function(require) {
     	     });
     },
     facebook: function(){
+    	//pop-over con share facebook e twitter
     	var u;
     	var t;
     	var url4Share;
     	//valorizziamo le variabili con i valori da passare
-    	u=self.location.href;
-    	t=document.title;
+    	u=$("#soci");
     	//codifichiamo secondo i dettami di Fb
     	u=encodeURIComponent(u);
-    	t=encodeURIComponent(t);
     	//costruiamo il link:
-    	url4Share='http://www.facebook.com/sharer.php?u='+u+'&t='+t;
+    	url4Share='http://www.facebook.com/sharer.php?u='+u;
     	//apriamo il link
     	self.location.href=url4Share;
     },
@@ -47,12 +46,11 @@ define(function(require) {
     	$(".title").remove();
     	$("#title").after("<h1 class='title prova'>Locale</h1>");
     	$("#analcolici").append("<span class='icon icon-share' id='social'></span>");
-        $("#social").css("left","400px");
+        $("#social").css("left","300px");
         $("#social").on('tap',this.facebook);
     	var locale=new localeSm();
     	locale.attributes.nome=sessionStorage.getItem("selezionato_nome_locale");
-    	locale.attributes.descrizione=sessionStorage.getItem("selezionato_desc_locale");
-    	
+    	locale.attributes.descrizione=sessionStorage.getItem("selezionato_desc_locale");	
     	var localec=new localeSc(locale);
     	this.collection= localec;
     	spinner.stop();
