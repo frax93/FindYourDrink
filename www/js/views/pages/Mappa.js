@@ -15,7 +15,7 @@ define(function(require) {
     	$(window).on('orientationchange',this.gotolocale);
     	this.loadData();
     	this.template = Utils.templates.mappa;
-     	this.listenTo(this, "inTheDOM", this.addMap);
+     	this.listenTo(this, "inTheDOM", this.addMap());
      	
      	
     },

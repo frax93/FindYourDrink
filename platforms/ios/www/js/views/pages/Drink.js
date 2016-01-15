@@ -31,6 +31,7 @@ define(function(require) {
     
     loadData: function() {
     	$(".title").remove();
+    	$("#toogle").hide();
     	$("#title").after("<h1 class='title prova'>Drink</h1>");  
     	if(this.collection==undefined){
     	var drink_solo=new Drink_model();

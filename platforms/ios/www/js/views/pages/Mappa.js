@@ -15,7 +15,7 @@ define(function(require) {
     	$(window).on('orientationchange',this.gotolocale);
     	this.loadData();
     	this.template = Utils.templates.mappa;
-     	this.listenTo(this, "inTheDOM", this.addMap);
+     	this.listenTo(this, "inTheDOM", this.addMap());
      	
      	
     },
@@ -43,17 +43,20 @@ define(function(require) {
     },
     
   addMap: function() {
-var map;
-var x = document.getElementById("errori");
-
-navigator.geolocation.getCurrentPosition(function(position){ 
-  var chicago = {lat: position.coords.latitude, lng: position.coords.longitude };
-  var indianapolis = {lat: 41.294938, lng: 13.3537368};
-
+	  navigator.geolocation.watchPosition(function(position){ 
+  var posizione_attuale = {lat: position.coords.latitude, lng: position.coords.longitude };
+	  var geocoder = new google.maps.Geocoder();
+	  var via=sessionStorage.getItem("sel_loc_mappa");
+	  geocoder.geocode({ 'address': via+",L'Aquila" }, function(results, status) {
+	  if (status == google.maps.GeocoderStatus.OK){
+		//Coordinate del locale
+	    var posizione_locale={
+	    		lat: results[0].geometry.location.lat(),
+	            lng: results[0].geometry.location.lng()};
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: chicago,
+    center: posizione_attuale,
     scrollwheel: false,
-    zoom: 7
+    zoom: 20
   });
    var directionsDisplay = new google.maps.DirectionsRenderer({
     map: map
@@ -61,8 +64,8 @@ navigator.geolocation.getCurrentPosition(function(position){
 
   // Set destination, origin and travel mode.
   var request = {
-    destination: indianapolis,
-    origin: chicago,
+    destination: posizione_locale,
+    origin: posizione_attuale,
     travelMode: google.maps.TravelMode.DRIVING
   };
 
@@ -74,20 +77,10 @@ navigator.geolocation.getCurrentPosition(function(position){
       directionsDisplay.setDirections(response);
     }
   });
-  
+	  }
+	});
   }, function(){switch(error.code) {
-        case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
-            break;
-        case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
-            break;
-        case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
-            break;
-        case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
-            break;
+       //nothing
     }});
 
    spinner.stop();

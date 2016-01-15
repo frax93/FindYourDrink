@@ -32,7 +32,6 @@ define(function(require) {
             nome: response[0].name,
             id: "id"+response[0].ident
           });
-    	  debugger;
           var drink_found=new drink_collection(drink);
           var drink_v=new drink_view(drink_found);
           $("#app").after("<div id='result'></div>");
