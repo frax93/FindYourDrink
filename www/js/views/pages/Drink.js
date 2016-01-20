@@ -37,7 +37,7 @@ define(function(require) {
     	var drink_solo=new Drink_model();
     	drink_solo.attributes.nome=sessionStorage.getItem("selezionato_nome");
     	BaasBox.loadCollectionWithParams("Preferiti",{where:"drink="+"'"+drink_solo.attributes.nome+"'"}).done(function(res){
-    		if(res[0].drink.lenght!=0){
+    		if(res.lenght!=0){
     			$("#star").remove();
     		    $("#star1").append("<span class='icon icon-star-filled' id='star'>Gia' nei preferiti</span>");
     		    $("#star").css("color","#FFD700");
@@ -58,8 +58,20 @@ define(function(require) {
     	   $("#star").removeClass("icon-star");
     	   $("#star").addClass("icon-star-filled");
     	   $("#star").css("color","#FFD700");
-    	   var drink_value=$(".media-body").attr("value");
-    	   var drink={ "drink" : drink_value};
+         var drink_value=$(".media-body").attr("value");
+         var drink;
+         if($("#hidden").lenght){
+    	     drink={ 
+                  "drink" : drink_value,
+                  "tipo": "analcolici"
+                     };
+       }
+       else{
+          drink={ 
+                  "drink" : drink_value,
+                  "tipo": "drink"
+                     };
+       }
      	   BaasBox.loadCollection("Preferiti").done(function(res){
     		  BaasBox.save(drink,"Preferiti");
     	   });

@@ -5,10 +5,8 @@ define(function(require) {
   var drinkm = require("models/Drink");
   var Utils = require("utils");
   var spinner=require("spinner");
-  var drinkca=new drinkc(); 
   
   var preferitiView = Utils.Page.extend({
-    collection: drinkca,
     constructorName: "preferitiView",
    events: {
 	   "tap #id1": "selected",
@@ -36,7 +34,7 @@ define(function(require) {
     },
 
     render: function() {
-       $(this.el).html(this.template({Collec: this.collection.toJSON()}));
+       $(this.el).html(this.template());
       return this;
     },   
    
@@ -44,7 +42,8 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").hide();
     	$(".title").remove();
-    	$("#title").after("<h1 class='title prova'>Preferiti</h1>");  
+    	$("#title").after("<h1 class='title prova'>Preferiti</h1>");
+    	$("#toogle").remove();
     	var collection= new drinkc();
     	BaasBox.loadCollection("Preferiti").done(function(res){
     		var i=0;

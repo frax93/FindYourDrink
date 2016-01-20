@@ -5,10 +5,8 @@ define(function(require) {
   var drinkm = require("models/Drink");
   var Utils = require("utils");
   var spinner=require("spinner");
-  var drinkca=new drinkc(); 
   
   var preferitiView = Utils.Page.extend({
-    collection: drinkca,
     constructorName: "preferitiView",
    events: {
 	   "tap #id1": "selected",
@@ -27,7 +25,6 @@ define(function(require) {
        "tap #id14": "selected",
        "tap #id15": "selected"
     },
-
     initialize: function() {
       // load the precompiled template
     	this.template = Utils.templates.append;
@@ -36,7 +33,7 @@ define(function(require) {
     },
 
     render: function() {
-       $(this.el).html(this.template({Collec: this.collection.toJSON()}));
+       $(this.el).html(this.template());
       return this;
     },   
    
@@ -44,7 +41,8 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$("#showme").hide();
     	$(".title").remove();
-    	$("#title").after("<h1 class='title prova'>Preferiti</h1>");  
+    	$("#title").after("<h1 class='title prova'>Preferiti</h1>");
+    	$("#toogle").remove();
     	var collection= new drinkc();
     	BaasBox.loadCollection("Preferiti").done(function(res){
     		var i=0;
@@ -53,14 +51,16 @@ define(function(require) {
 	  	    	  var model = new drinkm({
 	  	    		nome: res[key].drink,
 	  	    		id: "id"+i,
-	  	    		cartella: "drink"
+	  	    		cartella: "drink",
+              val:res[key].drink,
+              tipo: res[key].tipo
 	  	    	  }); 
 	  	    	  collection.add(model);
 	  	    	 }
 	        var page = new ListView({
 			    collection: collection
 		    });
-            window.$('#append').after(page.render().$el);
+            window.$('#append').append(page.render().$el);
     	}).fail(function(error){
     		//Fare qualcosa per segnalare errore
     	});
@@ -68,7 +68,9 @@ define(function(require) {
     selected: function(event){
     	var id = event.target.id;
     	spinner.spin(document.body);
-    	BaasBox.loadCollectionWithParams("drink",{where:"ident="+"'"+id+"'"}).done(function(res){
+      var name=$("#"+id+".pref").attr("value");
+      var tipo=$("#"+id+".pref").attr("tipo");
+    	BaasBox.loadCollectionWithParams(tipo,{where:"name="+"'"+name+"'"}).done(function(res){
     	     sessionStorage.setItem("selezionato_nome",res[0].name);
     	     sessionStorage.setItem("selezionato_desc",res[0].descrizione);
     	     Backbone.history.navigate("Drink",{trigger: true});

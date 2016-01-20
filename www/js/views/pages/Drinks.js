@@ -48,6 +48,8 @@ define(function(require) {
     analcolici: function(){
     	if($("#toogle").hasClass("active")){
     		$("#listview").remove();
+        $("#toogle").append("<div id='hidden'>Analcolico</div>");
+        $("#hidden").hide();
     		var collection=new Drink_collection();
     		for(var key=0;key<=sessionStorage.length;key++)
     	       baasbox("analcolici",key,collection);
@@ -68,7 +70,7 @@ define(function(require) {
     	$("#title").after("<h1 class='title prova'>Drinks</h1>");
     	if(!$("#toogle").length){
     	   $("#analcolici").append(" <span class='toggle' id='toogle'><span class='toggle-handle' ></span></span>");
-           $("#toogle").css("left","400px");
+           $("#toogle").css("left","80%");
     	}
     	baasbox=this.baasboxrequest;
         $("#toogle").on('tap',this.analcolici);

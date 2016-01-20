@@ -13,7 +13,7 @@ require.config({
     spinner: 'spinner',
     preloader: '../lib/preloader/pre-loader',
     utils: '../lib/utils/utils',
-	baasbox: '../lib/baasbox/JS-SDK-0.8.4/baasbox'
+	baasbox: '../lib/baasbox/baasbox'
   },
   shim: {
     'jquery': {

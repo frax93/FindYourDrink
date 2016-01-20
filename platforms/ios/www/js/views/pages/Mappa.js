@@ -32,20 +32,27 @@ define(function(require) {
     	// query DB    $(this.el).html(this.template({collec: this.collection.toJSON()}));
     	$(".title").hide();
     	$("#hideme").hide();
+    	$("#maps").hide();
+    	$("#content").css("overflow-y","hidden");
+    	$("#content").css("left","-2%");
+    	$("#content").css("height","724%");
     },
 
  
     gotolocale: function(){
     	window.history.back("Locale");
     	$(window).off('orientationchange');
+    	navigator.geolocation.clearWatch(id);
     	$(".title").show();
     	$("#hideme").show();
+    	$("#maps").show();
+    	$("#content").css("overflow-y","scroll");
     },
     
   addMap: function() {
-	  navigator.geolocation.watchPosition(function(position){ 
-  var posizione_attuale = {lat: position.coords.latitude, lng: position.coords.longitude };
-	  var geocoder = new google.maps.Geocoder();
+	 id= navigator.geolocation.watchPosition(function(position){ 
+      var posizione_attuale = {lat: position.coords.latitude, lng: position.coords.longitude };
+	    var geocoder = new google.maps.Geocoder();
 	  var via=sessionStorage.getItem("sel_loc_mappa");
 	  geocoder.geocode({ 'address': via+",L'Aquila" }, function(results, status) {
 	  if (status == google.maps.GeocoderStatus.OK){
@@ -61,7 +68,6 @@ define(function(require) {
    var directionsDisplay = new google.maps.DirectionsRenderer({
     map: map
   });
-
   // Set destination, origin and travel mode.
   var request = {
     destination: posizione_locale,
@@ -82,7 +88,6 @@ define(function(require) {
   }, function(){switch(error.code) {
        //nothing
     }});
-
    spinner.stop();
 }    
     });

@@ -68,7 +68,7 @@ define(function(require) {
     	$("#title").after("<h1 class='title prova'>Drinks</h1>");
     	if(!$("#toogle").length){
     	   $("#analcolici").append(" <span class='toggle' id='toogle'><span class='toggle-handle' ></span></span>");
-           $("#toogle").css("left","400px");
+           $("#toogle").css("left","80%");
     	}
     	baasbox=this.baasboxrequest;
         $("#toogle").on('tap',this.analcolici);
