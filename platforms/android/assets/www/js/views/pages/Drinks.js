@@ -48,6 +48,8 @@ define(function(require) {
     analcolici: function(){
     	if($("#toogle").hasClass("active")){
     		$("#listview").remove();
+        $("#toogle").append("<div id='hidden'>Analcolico</div>");
+        $("#hidden").hide();
     		var collection=new Drink_collection();
     		for(var key=0;key<=sessionStorage.length;key++)
     	       baasbox("analcolici",key,collection);

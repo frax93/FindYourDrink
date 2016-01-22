@@ -33,7 +33,7 @@ define(function(require) {
     firstView: "Ingredienti",
 
     initialize: function(options) {
-      BAASBOX_URL="http://159.203.90.78:9000"; //server web http://159.203.90.78:9000 o http://localhost:9000
+      BAASBOX_URL="http://localhost:9000"; //server web http://159.203.90.78:9000 o http://localhost:9000
         BAASBOX_APP_CODE="1234567890";
         BAASBOX_USER="admin";
         BAASBOX_PASSWORD="admin";
