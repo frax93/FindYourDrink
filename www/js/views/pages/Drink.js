@@ -36,13 +36,6 @@ define(function(require) {
     	if(this.collection==undefined){
     	var drink_solo=new Drink_model();
     	drink_solo.attributes.nome=sessionStorage.getItem("selezionato_nome");
-    	BaasBox.loadCollectionWithParams("Preferiti",{where:"drink="+"'"+drink_solo.attributes.nome+"'"}).done(function(res){
-    		if(res.lenght!=0){
-    			$("#star").remove();
-    		    $("#star1").append("<span class='icon icon-star-filled' id='star'>Gia' nei preferiti</span>");
-    		    $("#star").css("color","#FFD700");
-    		}
-    		});
     	drink_solo.attributes.descrizione=sessionStorage.getItem("selezionato_desc");
     	var drink_collection=new Drink_collection(drink_solo);
     	this.collection= drink_collection;
@@ -60,7 +53,7 @@ define(function(require) {
     	   $("#star").css("color","#FFD700");
          var drink_value=$(".media-body").attr("value");
          var drink;
-         if($("#hidden").lenght){
+         if($("#hidden").lenght!=0){
     	     drink={ 
                   "drink" : drink_value,
                   "tipo": "analcolici"

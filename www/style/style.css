@@ -93,4 +93,14 @@ body {
  			text-align: center;
   		    border: 1px solid black;
 }
+  .drinkjj{ 
+ 
+        float: left;
+        width: 110px;
+        height: 110px;
+      text-align: center;
+          border: 1px solid black;
+          background: CORNFLOWERBLUE;
+          border:1px line red; 
+  }
   

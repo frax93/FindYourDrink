@@ -56,6 +56,7 @@ define(function(require) {
     	}
     	else{
     		$("#listview").remove();
+        $("#hidden").remove();
     		var collection=new Drink_collection();
     		for(var key=0;key<=sessionStorage.length;key++)
     	       baasbox("drink",key,collection);

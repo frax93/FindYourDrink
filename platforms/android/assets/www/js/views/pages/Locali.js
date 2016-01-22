@@ -90,7 +90,7 @@ window.$('#append').after(page.render().$el);}
     	     sessionStorage.setItem("selezionato_desc_locale",res[0].descrizione);
     	     sessionStorage.setItem("sel_loc_mappa",res[0].via);
     	     sessionStorage.setItem("sel_loc_orario",res[0].orario);
-    	     sessionStorage.setItem("sel_loc_numero",res[0].numero);
+    	     sessionStorage.setItem("sel_loc_numero",res[0].telefono);
     	     Backbone.history.navigate("Locale",{trigger: true});
     	});
     }
